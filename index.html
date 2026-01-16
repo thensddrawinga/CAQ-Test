@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -660,83 +661,37 @@
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">공유용 이미지</h3>
                 <div 
-  id="share-card"
-  className="relative w-full aspect-square max-w-md mx-auto rounded-2xl overflow-hidden"
-  style={{
-    background: results.aqScore >= 128 ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' :
-               results.aqScore >= 113 ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' :
-               results.aqScore >= 98 ? 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' :
-               results.aqScore >= 83 ? 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)' :
-               'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
-  }}
->
-  <div 
-    className="absolute inset-0 opacity-10"
-    style={{
-      backgroundImage: results.aqScore >= 128 ? 
-        'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.5) 10px, rgba(255,255,255,.5) 20px)' :
-        results.aqScore >= 113 ?
-        'radial-gradient(circle at 20% 50%, rgba(255,255,255,.3) 0%, transparent 50%)' :
-        results.aqScore >= 98 ?
-        'repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(255,255,255,.3) 15px, rgba(255,255,255,.3) 30px)' :
-        'none'
-    }}
-  />
-  
-  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
-    <div className="text-xs font-light tracking-wider mb-1">C.A.Q TEST</div>
-    <div className="text-3xl mb-1">
-      {(() => {
-        const maxScore = Math.max(results.typeAScore, results.typeBScore, results.typeCScore);
-        const minScore = Math.min(results.typeAScore, results.typeBScore, results.typeCScore);
-        const scoreDiff = maxScore - minScore;
-        
-        if (scoreDiff <= 15) {
-          return '⚖️';
-        } else if (maxScore === results.typeAScore) {
-          return '🎨';
-        } else if (maxScore === results.typeBScore) {
-          return '💡';
-        } else {
-          return '✨';
-        }
-      })()}
-    </div>
-    <div className="text-5xl font-bold mb-1">{results.aqScore}</div>
-    <div className="bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full mb-1">
-      <span className="text-sm font-bold">
-        {results.aqScore >= 128 ? 'Level-Ultra' :
-         results.aqScore >= 113 ? 'Level-Advanced' :
-         results.aqScore >= 98 ? 'Level-Normal' :
-         results.aqScore >= 83 ? 'Level-Basic' : 'Level-Entry'}
-      </span>
-    </div>
-    <div className="text-sm font-semibold mb-1">
-      {(() => {
-        const maxScore = Math.max(results.typeAScore, results.typeBScore, results.typeCScore);
-        const minScore = Math.min(results.typeAScore, results.typeBScore, results.typeCScore);
-        const scoreDiff = maxScore - minScore;
-        
-        if (scoreDiff <= 15) {
-          return '올라운더';
-        } else if (maxScore === results.typeAScore) {
-          return '컬러 마에스트로';
-        } else if (maxScore === results.typeBScore) {
-          return '명암의 달인';
-        } else {
-          return '채도의 마술사';
-        }
-      })()}
-    </div>
-    <div className="text-base font-semibold mb-2">
-      상위 {results.percentile}%
-    </div>
-    <div className="absolute bottom-4 text-center">
-      <div className="text-xs opacity-80">Color Aesthetic Quotient</div>
-      <div className="text-xs opacity-60 mt-0.5">색채 감각 지능 테스트</div>
-    </div>
-  </div>
-</div>
+                  id="share-card"
+                  className="relative w-full aspect-square max-w-md mx-auto rounded-2xl overflow-hidden"
+                  style={{
+                    background: results.aqScore >= 128 ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' :
+                               results.aqScore >= 113 ? 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' :
+                               results.aqScore >= 98 ? 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' :
+                               results.aqScore >= 83 ? 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)' :
+                               'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)'
+                  }}
+                >
+                  <div 
+                    className="absolute inset-0 opacity-10"
+                    style={{
+                      backgroundImage: results.aqScore >= 128 ? 
+                        'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.5) 10px, rgba(255,255,255,.5) 20px)' :
+                        results.aqScore >= 113 ?
+                        'radial-gradient(circle at 20% 50%, rgba(255,255,255,.3) 0%, transparent 50%)' :
+                        results.aqScore >= 98 ?
+                        'repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(255,255,255,.3) 15px, rgba(255,255,255,.3) 30px)' :
+                        'none'
+                    }}
+                  />
+                  
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
+                    <div className="text-xs font-light tracking-wider mb-1">C.A.Q TEST</div>
+                    <div className="text-3xl mb-1">
+                      {results.aqScore >= 128 ? '👑' :
+                       results.aqScore >= 113 ? '💎' :
+                       results.aqScore >= 98 ? '⭐' :
+                       results.aqScore >= 83 ? '🌱' : '🔰'}
+                    </div>
                     <div className="text-5xl font-bold mb-1">{results.aqScore}</div>
                     <div className="bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full mb-1">
                       <span className="text-sm font-bold">
