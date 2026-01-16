@@ -927,26 +927,67 @@
 </Card>
 
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">강점 분석</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200">
-                    <h4 className="font-bold text-green-900 mb-2">가장 높은 지수</h4>
-                    <p className="text-green-800 text-sm">
-                      {maxScore === results.typeAScore && '색상 결합 능력이 뛰어납니다. 서로 다른 색을 조화롭게 배치하는 감각이 있습니다.'}
-                      {maxScore === results.typeBScore && '명도 조절 능력이 뛰어납니다. 밝기 차이를 정확히 인식하고 활용할 수 있습니다.'}
-                      {maxScore === results.typeCScore && '채도 배분 능력이 뛰어납니다. 색의 선명도를 조절하는 감각이 있습니다.'}
-                    </p>
-                  </div>
-                  <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
-                    <h4 className="font-bold text-blue-900 mb-2">개선 영역</h4>
-                    <p className="text-blue-800 text-sm">
-                      {minScore === results.typeAScore && '색상 결합 연습: 색상환을 참고해 보색, 유사색 관계를 학습해보세요.'}
-                      {minScore === results.typeBScore && '명도 훈련: 흑백 사진을 보며 명암 대비 감각을 키워보세요.'}
-                      {minScore === results.typeCScore && '채도 연습: 같은 색상의 다양한 채도 변화를 관찰해보세요.'}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">색채 성향 분석</h3>
+  <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl border-2 border-purple-200">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="text-4xl">
+        {(() => {
+          const maxScore = Math.max(results.typeAScore, results.typeBScore, results.typeCScore);
+          const minScore = Math.min(results.typeAScore, results.typeBScore, results.typeCScore);
+          const scoreDiff = maxScore - minScore;
+          
+          if (scoreDiff <= 15) {
+            return '⚖️';
+          } else if (maxScore === results.typeAScore) {
+            return '🎨';
+          } else if (maxScore === results.typeBScore) {
+            return '💡';
+          } else {
+            return '✨';
+          }
+        })()}
+      </div>
+      <div>
+        <h4 className="text-2xl font-bold text-gray-900">
+          {(() => {
+            const maxScore = Math.max(results.typeAScore, results.typeBScore, results.typeCScore);
+            const minScore = Math.min(results.typeAScore, results.typeBScore, results.typeCScore);
+            const scoreDiff = maxScore - minScore;
+            
+            if (scoreDiff <= 15) {
+              return '균형형 "올라운더"';
+            } else if (maxScore === results.typeAScore) {
+              return '조화 특화형 "컬러 마에스트로"';
+            } else if (maxScore === results.typeBScore) {
+              return '대비 특화형 "명암의 달인"';
+            } else {
+              return '감성 특화형 "채도의 마술사"';
+            }
+          })()}
+        </h4>
+        <p className="text-sm text-gray-600">당신의 색채 감각 프로필</p>
+      </div>
+    </div>
+    
+    <p className="text-gray-700 leading-relaxed">
+      {(() => {
+        const maxScore = Math.max(results.typeAScore, results.typeBScore, results.typeCScore);
+        const minScore = Math.min(results.typeAScore, results.typeBScore, results.typeCScore);
+        const scoreDiff = maxScore - minScore;
+        
+        if (scoreDiff <= 15) {
+          return '당신은 색채의 제너럴리스트입니다. 색상 조합, 명도 대비, 채도 조절 세 가지 영역을 고르게 다루는 균형잡힌 감각을 가지고 있습니다. 특정 영역에 치우치지 않고 전체를 조망하는 능력 덕분에 복잡한 프로젝트에서도 일관성을 유지할 수 있습니다. 팀 프로젝트에서 다양한 의견을 조율하고, 브랜드 전체의 비주얼 아이덴티티를 설계하는 작업에 특히 강점을 보입니다. 모든 걸 잘하지만, 때로는 한 가지에 집중해 전문성을 키우는 것도 고려해보세요.';
+        } else if (maxScore === results.typeAScore) {
+          return '당신은 색상의 지휘자입니다. 서로 다른 색을 하나의 화음처럼 조합하는 데 타고난 재능이 있습니다. 보색, 유사색, 삼각배색을 넘어 직관적으로 색들 사이의 관계를 읽어내고, 복잡한 팔레트도 자연스럽게 구성합니다. 이 능력은 브랜드 컬러 시스템 설계, 일러스트레이션, 패션 디자인처럼 다채로운 색상 조합이 핵심인 분야에서 빛을 발합니다. 다만 명도와 채도 조절에도 신경 쓴다면 더욱 완성도 높은 결과물을 만들 수 있습니다.';
+        } else if (maxScore === results.typeBScore) {
+          return '당신은 빛과 그림자의 건축가입니다. 밝기의 차이만으로 시각적 위계를 세우고, 공간감을 만들어내는 능력이 뛰어납니다. 같은 색이라도 명도를 조절해 전혀 다른 느낌을 연출할 수 있고, 가독성이 생명인 인터페이스 디자인에서 탁월한 감각을 발휘합니다. UI/UX 디자인, 타이포그래피, 레이아웃 작업처럼 정보의 우선순위를 명확히 전달해야 하는 분야에 최적화되어 있습니다. 색상 조합과 채도 감각을 보완한다면 표현의 폭이 더욱 넓어질 것입니다.';
+        } else {
+          return '당신은 분위기의 연금술사입니다. 색의 선명도를 조절해 감정과 무드를 섬세하게 표현하는 감각이 탁월합니다. 순색의 강렬함과 파스텔의 부드러움, 무채색의 차분함을 자유롭게 오가며 원하는 톤앤매너를 정확히 구현합니다. 광고 비주얼, 사진 보정, 인테리어 컬러 기획처럼 감성적 반응을 이끌어내는 작업에서 강점을 보입니다. 색상 조합과 명도 대비 원리를 더 익힌다면 감성적이면서도 논리적인 디자인이 가능해질 것입니다.';
+        }
+      })()}
+    </p>
+  </div>
+</Card>
 
               <div className="text-center">
                 <Button
