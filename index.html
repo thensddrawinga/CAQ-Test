@@ -17,7 +17,13 @@
   <meta name="twitter:description" content="당신의 색채 감각 지능을 측정하세요!">
   <meta name="twitter:image" content="https://caq-test.vercel.app/caq-og-image.png">
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+ 
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+ <!-- 카카오 SDK -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<!-- html2canvas 라이브러리 (이미지 다운로드용) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes shimmer {
@@ -711,40 +717,113 @@
                   아래 이미지를 길게 눌러 저장하거나 공유하세요! 📸
                 </p>
                 
-                <div className="flex gap-3 justify-center">
-                  <button
-                    onClick={() => {
-                      const url = window.location.href;
-                      const text = `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%! 너도 테스트해봐!`;
-                      
-                      if (navigator.share) {
-                        navigator.share({ title: 'C.A.Q 테스트', text: text + '\n' + url })
-                          .catch(() => alert('링크: ' + url));
-                      } else {
-                        alert('✅ 링크 복사!\n\n' + text + '\n\n' + url);
-                      }
-                    }}
-                    className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 font-medium"
-                  >
-                    <Share2 className="w-4 h-4" />
-                    테스트 링크 공유
-                  </button>
-                  
-                  <button
-                    onClick={() => {
-                      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                      if (isMobile) {
-                        alert('📸 사진 저장 방법:\n\n위 공유용 이미지를 길게 누르면\n"이미지 저장" 또는 "사진 앱에 추가" 옵션이 나옵니다.\n\n저장 후 인스타/카톡에 올려주세요!');
-                      } else {
-                        alert('📸 사진 저장 방법:\n\n위 공유용 이미지에 마우스 우클릭 →\n"이미지 저장" 선택\n\n저장 후 SNS에 올려주세요!');
-                      }
-                    }}
-                    className="flex-1 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg flex items-center justify-center gap-2 font-medium"
-                  >
-                    <Download className="w-4 h-4" />
-                    사진 저장/공유
-                  </button>
-                </div>
+                <div className="space-y-3">
+  <button
+    onClick={async () => {
+      try {
+        const element = document.getElementById('share-card');
+        const canvas = await html2canvas(element, {
+          scale: 2,
+          backgroundColor: null,
+          logging: false
+        });
+        
+        const link = document.createElement('a');
+        link.download = `CAQ-Score-${results.aqScore}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        
+        alert('✅ 이미지가 다운로드되었습니다!');
+      } catch (error) {
+        alert('❌ 이미지 저장에 실패했습니다.');
+      }
+    }}
+    className="w-full px-4 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg flex items-center justify-center gap-2 font-medium"
+  >
+    <Download className="w-4 h-4" />
+    이미지 다운로드
+  </button>
+
+  <button
+    onClick={async () => {
+      const url = window.location.href;
+      const text = `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%! 너도 테스트해봐!`;
+      
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'C.A.Q 테스트 결과',
+            text: text,
+            url: url
+          });
+        } catch (error) {
+          if (error.name !== 'AbortError') {
+            alert('공유 실패: ' + error.message);
+          }
+        }
+      } else {
+        navigator.clipboard.writeText(text + '\n' + url)
+          .then(() => alert('✅ 링크가 클립보드에 복사되었습니다!'))
+          .catch(() => alert('링크: ' + url));
+      }
+    }}
+    className="w-full px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg flex items-center justify-center gap-2 font-medium"
+  >
+    <Share2 className="w-4 h-4" />
+    테스트 링크 공유
+  </button>
+
+  <div className="grid grid-cols-3 gap-2">
+    <button
+      onClick={() => {
+        if (window.Kakao) {
+          if (!window.Kakao.isInitialized()) {
+            window.Kakao.init('YOUR_KAKAO_APP_KEY');
+          }
+          
+          window.Kakao.Link.sendDefault({
+            objectType: 'feed',
+            content: {
+              title: 'C.A.Q 테스트',
+              description: `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%! 너도 테스트해봐!`,
+              imageUrl: 'https://caq-test.vercel.app/caq-og-image.png',
+              link: {
+                mobileWebUrl: window.location.href,
+                webUrl: window.location.href
+              }
+            }
+          });
+        } else {
+          alert('카카오톡 공유 기능을 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
+        }
+      }}
+      className="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg font-medium text-sm"
+    >
+      카톡
+    </button>
+
+    <button
+      onClick={() => {
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+      }}
+      className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm"
+    >
+      페북
+    </button>
+
+    <button
+      onClick={() => {
+        const text = encodeURIComponent(`나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%!`);
+        const url = encodeURIComponent(window.location.href);
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
+      }}
+      className="px-3 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-lg font-medium text-sm"
+    >
+      트위터
+    </button>
+  </div>
+</div>
               </Card>
 
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
