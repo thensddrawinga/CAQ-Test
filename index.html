@@ -775,32 +775,13 @@
 
   <div className="grid grid-cols-3 gap-2">
     <button
-      onClick={() => {
-        if (window.Kakao) {
-          if (!window.Kakao.isInitialized()) {
-            window.Kakao.init('YOUR_KAKAO_APP_KEY');
-          }
-          
-          window.Kakao.Link.sendDefault({
-            objectType: 'feed',
-            content: {
-              title: 'C.A.Q 테스트',
-              description: `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%! 너도 테스트해봐!`,
-              imageUrl: 'https://caq-test.vercel.app/caq-og-image.png',
-              link: {
-                mobileWebUrl: window.location.href,
-                webUrl: window.location.href
-              }
-            }
-          });
-        } else {
-          alert('카카오톡 공유 기능을 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
-        }
-      }}
-      className="px-3 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-lg font-medium text-sm"
-    >
-      카톡
-    </button>
+  onClick={() => {
+    alert('📱 인스타그램 공유 방법:\n\n1. 위 "이미지 다운로드" 버튼 클릭\n2. 다운받은 이미지를 인스타그램에 업로드\n3. 링크는 프로필이나 스토리에 추가!');
+  }}
+  className="px-3 py-2 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 text-white rounded-lg font-medium text-sm"
+>
+  인스타
+</button>
 
     <button
       onClick={() => {
