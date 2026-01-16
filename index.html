@@ -696,7 +696,7 @@
                   </div>
                 </div>
                 <p className="text-center text-sm text-gray-500 mt-4 mb-4">
-                  위 이미지를 스크린샷 찍어서 SNS에 공유해보세요! 📸
+                  아래 이미지를 길게 눌러 저장하거나 공유하세요! 📸
                 </p>
                 
                 <div className="flex gap-3 justify-center">
@@ -722,15 +722,15 @@
                     onClick={() => {
                       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
                       if (isMobile) {
-                        alert('📸 스크린샷 찍기:\n\niPhone: 전원+볼륨Up\nAndroid: 전원+볼륨Down\n\n갤러리 저장 후 인스타/카톡 공유!');
+                        alert('📸 사진 저장 방법:\n\n위 공유용 이미지를 길게 누르면\n"이미지 저장" 또는 "사진 앱에 추가" 옵션이 나옵니다.\n\n저장 후 인스타/카톡에 올려주세요!');
                       } else {
-                        alert('📸 스크린샷 찍기:\n\nWindows: Win+Shift+S\nMac: Cmd+Shift+4\n\n저장 후 SNS 공유!');
+                        alert('📸 사진 저장 방법:\n\n위 공유용 이미지에 마우스 우클릭 →\n"이미지 저장" 선택\n\n저장 후 SNS에 올려주세요!');
                       }
                     }}
                     className="flex-1 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg flex items-center justify-center gap-2 font-medium"
                   >
                     <Download className="w-4 h-4" />
-                    스크린샷 안내
+                    사진 저장/공유
                   </button>
                 </div>
               </Card>
@@ -844,25 +844,6 @@
                 >
                   다시 테스트하기
                 </Button>
-              </div>
-
-              <div className="fixed bottom-8 right-8 w-10 h-10">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="silverBase2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{ stopColor: '#E8E8E8', stopOpacity: 1 }} />
-                      <stop offset="50%" style={{ stopColor: '#C0C0C0', stopOpacity: 1 }} />
-                      <stop offset="100%" style={{ stopColor: '#A8A8A8', stopOpacity: 1 }} />
-                    </linearGradient>
-                  </defs>
-                  <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#silverBase2)" stroke="#888" strokeWidth="1"/>
-                  <path d="M50 20 L54 38 L72 38 L58 48 L62 66 L50 56 L38 66 L42 48 L28 38 L46 38 Z" 
-                        fill="#F0F0F0" stroke="#B0B0B0" strokeWidth="0.5"/>
-                  <circle cx="50" cy="50" r="13" fill="url(#silverBase2)" stroke="#A0A0A0" strokeWidth="1"/>
-                  <circle cx="47" cy="47" r="5" fill="#FFFFFF" opacity="0.6"/>
-                  <text x="50" y="49" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#555">C.A.Q</text>
-                  <text x="50" y="56" textAnchor="middle" fontSize="4.5" fill="#777">CERTIFIED</text>
-                </svg>
               </div>
             </div>
           </div>
