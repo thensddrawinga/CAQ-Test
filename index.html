@@ -844,84 +844,87 @@
               </Card>
 
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">세부 지수</h3>
-                <p className="text-xs text-gray-500 mb-6">
-                  L-U: Ultra · L-A: Advanced · L-N: Normal · L-B: Basic · L-E: Entry
-                </p>
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-semibold text-gray-700">색상 결합 지수</span>
-                      <div className="flex items-center gap-2">
-                        <span className="font-bold text-gray-900">{results.typeAScore}점</span>
-                        <span className={`text-xs px-2 py-1 rounded font-medium ${
-                          results.typeAScore >= 80 ? 'bg-purple-100 text-purple-800' :
-                          results.typeAScore >= 65 ? 'bg-blue-100 text-blue-800' :
-                          results.typeAScore >= 50 ? 'bg-green-100 text-green-800' :
-                          results.typeAScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-gray-100 text-gray-800'
-                        }`}>
-                          {results.typeAScore >= 80 ? 'L-U' :
-                           results.typeAScore >= 65 ? 'L-A' :
-                           results.typeAScore >= 50 ? 'L-N' :
-                           results.typeAScore >= 35 ? 'L-B' : 'L-E'}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeAScore + '%' }}></div>
-                    </div>
-                  </div>
+  <h3 className="text-2xl font-bold text-gray-900 mb-2">세부 지수</h3>
+  <p className="text-xs text-gray-500 mb-6">
+    L-U: Ultra · L-A: Advanced · L-N: Normal · L-B: Basic · L-E: Entry
+  </p>
+  <div className="space-y-6">
+    <div>
+      <div className="flex justify-between mb-2">
+        <span className="font-semibold text-gray-700">색상 결합 지수</span>
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-gray-900">{results.typeAScore}점</span>
+          <span className={`text-xs px-2 py-1 rounded font-medium ${
+            results.typeAScore >= 80 ? 'bg-purple-100 text-purple-800' :
+            results.typeAScore >= 65 ? 'bg-blue-100 text-blue-800' :
+            results.typeAScore >= 50 ? 'bg-green-100 text-green-800' :
+            results.typeAScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
+            'bg-gray-100 text-gray-800'
+          }`}>
+            {results.typeAScore >= 80 ? 'L-U' :
+             results.typeAScore >= 65 ? 'L-A' :
+             results.typeAScore >= 50 ? 'L-N' :
+             results.typeAScore >= 35 ? 'L-B' : 'L-E'}
+          </span>
+        </div>
+      </div>
+      <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+        <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeAScore + '%' }}></div>
+      </div>
+      <p className="text-xs text-gray-600 leading-relaxed">서로 다른 색상을 조화롭게 배치하는 능력입니다. 보색, 유사색, 삼각배색 등 색상환에서의 관계를 이해하고, 색들이 서로 충돌하지 않고 균형을 이루도록 조합하는 감각을 측정합니다.</p>
+    </div>
 
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-semibold text-gray-700">명도 조절 지수</span>
-                      <div className="flex items-center gap-2">
-                        <span className="font-bold text-gray-900">{results.typeBScore}점</span>
-                        <span className={`text-xs px-2 py-1 rounded font-medium ${
-                          results.typeBScore >= 80 ? 'bg-purple-100 text-purple-800' :
-                          results.typeBScore >= 65 ? 'bg-blue-100 text-blue-800' :
-                          results.typeBScore >= 50 ? 'bg-green-100 text-green-800' :
-                          results.typeBScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-gray-100 text-gray-800'
-                        }`}>
-                          {results.typeBScore >= 80 ? 'L-U' :
-                           results.typeBScore >= 65 ? 'L-A' :
-                           results.typeBScore >= 50 ? 'L-N' :
-                           results.typeBScore >= 35 ? 'L-B' : 'L-E'}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeBScore + '%' }}></div>
-                    </div>
-                  </div>
+    <div>
+      <div className="flex justify-between mb-2">
+        <span className="font-semibold text-gray-700">명도 조절 지수</span>
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-gray-900">{results.typeBScore}점</span>
+          <span className={`text-xs px-2 py-1 rounded font-medium ${
+            results.typeBScore >= 80 ? 'bg-purple-100 text-purple-800' :
+            results.typeBScore >= 65 ? 'bg-blue-100 text-blue-800' :
+            results.typeBScore >= 50 ? 'bg-green-100 text-green-800' :
+            results.typeBScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
+            'bg-gray-100 text-gray-800'
+          }`}>
+            {results.typeBScore >= 80 ? 'L-U' :
+             results.typeBScore >= 65 ? 'L-A' :
+             results.typeBScore >= 50 ? 'L-N' :
+             results.typeBScore >= 35 ? 'L-B' : 'L-E'}
+          </span>
+        </div>
+      </div>
+      <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+        <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeBScore + '%' }}></div>
+      </div>
+      <p className="text-xs text-gray-600 leading-relaxed">색의 밝고 어두운 정도를 정확히 인식하고 활용하는 능력입니다. 명도 대비를 통해 시각적 위계를 만들고, 가독성을 높이며, 공간감을 표현하는 능력을 평가합니다.</p>
+    </div>
 
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-semibold text-gray-700">채도 배분 지수</span>
-                      <div className="flex items-center gap-2">
-                        <span className="font-bold text-gray-900">{results.typeCScore}점</span>
-                        <span className={`text-xs px-2 py-1 rounded font-medium ${
-                          results.typeCScore >= 80 ? 'bg-purple-100 text-purple-800' :
-                          results.typeCScore >= 65 ? 'bg-blue-100 text-blue-800' :
-                          results.typeCScore >= 50 ? 'bg-green-100 text-green-800' :
-                          results.typeCScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-gray-100 text-gray-800'
-                        }`}>
-                          {results.typeCScore >= 80 ? 'L-U' :
-                           results.typeCScore >= 65 ? 'L-A' :
-                           results.typeCScore >= 50 ? 'L-N' :
-                           results.typeCScore >= 35 ? 'L-B' : 'L-E'}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeCScore + '%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
+    <div>
+      <div className="flex justify-between mb-2">
+        <span className="font-semibold text-gray-700">채도 배분 지수</span>
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-gray-900">{results.typeCScore}점</span>
+          <span className={`text-xs px-2 py-1 rounded font-medium ${
+            results.typeCScore >= 80 ? 'bg-purple-100 text-purple-800' :
+            results.typeCScore >= 65 ? 'bg-blue-100 text-blue-800' :
+            results.typeCScore >= 50 ? 'bg-green-100 text-green-800' :
+            results.typeCScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
+            'bg-gray-100 text-gray-800'
+          }`}>
+            {results.typeCScore >= 80 ? 'L-U' :
+             results.typeCScore >= 65 ? 'L-A' :
+             results.typeCScore >= 50 ? 'L-N' :
+             results.typeCScore >= 35 ? 'L-B' : 'L-E'}
+          </span>
+        </div>
+      </div>
+      <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
+        <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeCScore + '%' }}></div>
+      </div>
+      <p className="text-xs text-gray-600 leading-relaxed">색의 선명도와 탁함의 정도를 조절하는 감각입니다. 순색과 파스텔, 무채색을 적절히 배분하여 강조와 배경을 구분하고, 전체적인 톤을 일관되게 유지하는 능력을 측정합니다.</p>
+    </div>
+  </div>
+</Card>
 
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">강점 분석</h3>
