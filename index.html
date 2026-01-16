@@ -85,29 +85,29 @@
           type: 'A',
           id: 'A1',
           difficulty: 'easy',
-          question: '다음 3색 조합 중 가장 조화로운 것은?',
+          question: '다음 중 가장 부조화한 색상 조합은?',
           options: [
-            { colors: ['#FF6B6B', '#4ECDC4', '#FFE66D'], correct: true },
-            { colors: ['#FF0000', '#00FF00', '#0000FF'], correct: false },
-            { colors: ['#8B4513', '#FF1493', '#00CED1'], correct: false },
-            { colors: ['#FF4500', '#32CD32', '#9400D3'], correct: false }
+            { colors: ['#FF6B6B', '#4ECDC4', '#45B7D1'], correct: false },
+            { colors: ['#FFA500', '#00FF00', '#FF00FF'], correct: true },
+            { colors: ['#2C3E50', '#3498DB', '#95A5A6'], correct: false },
+            { colors: ['#E74C3C', '#C0392B', '#D35400'], correct: false }
           ],
-          explanation: '첫 번째 조합(산호, 민트, 레몬)은 중간 채도와 밝기로 부드러운 조화를 이룹니다. 두 번째는 순색으로 너무 강렬하고, 세 번째는 색상 간 연결성이 부족하며, 네 번째는 채도 차이가 커서 불안정합니다.',
-          principle: '조화로운 색 조합은 비슷한 채도와 명도를 가지며, 색상환에서 균형잡힌 간격을 유지합니다.'
+          explanation: '주황(Orange), 초록(Green), 마젠타(Magenta)는 색상환에서 균등하게 떨어진 순수 원색 조합이지만, 채도가 모두 최고치여서 시각적 충돌이 심합니다. 조화로운 배색은 명도나 채도에 변화를 주어야 합니다.',
+          principle: '고채도 원색의 동시 사용은 시각 피로를 유발합니다.'
         },
         {
           type: 'A',
           id: 'A2',
           difficulty: 'easy',
-          question: '다음 3색 조합 중 가장 조화로운 것은?',
+          question: '다음 중 가장 부조화한 색상 조합은?',
           options: [
-            { colors: ['#2C3E50', '#E74C3C', '#ECF0F1'], correct: true },
-            { colors: ['#FF00FF', '#FFFF00', '#00FFFF'], correct: false },
-            { colors: ['#8B0000', '#FFD700', '#00FF7F'], correct: false },
-            { colors: ['#4B0082', '#FF6347', '#7FFF00'], correct: false }
+            { colors: ['#1ABC9C', '#16A085', '#27AE60'], correct: false },
+            { colors: ['#F39C12', '#E67E22', '#D35400'], correct: false },
+            { colors: ['#FFFF00', '#FF0000', '#00FFFF'], correct: true },
+            { colors: ['#9B59B6', '#8E44AD', '#713B87'], correct: false }
           ],
-          explanation: '첫 번째 조합(네이비, 코랄, 연회색)은 명도 대비와 온도 대비가 적절히 조화를 이룹니다. 나머지는 원색 조합이거나 색상 간 충돌이 심합니다.',
-          principle: '명도 대비와 색온도의 균형이 안정적인 조화를 만듭니다.'
+          explanation: '노랑, 빨강, 시안은 감산 혼합(인쇄)의 원색입니다. 순수한 형태로 함께 사용하면 각 색이 서로를 압도하려 해 극도의 불안정감을 조성합니다.',
+          principle: '원색 삼각형 배색은 채도 조절이 필수입니다.'
         },
         {
           type: 'A',
@@ -186,15 +186,15 @@
           type: 'B',
           id: 'B3',
           difficulty: 'medium',
-          question: '다음 중 가독성이 가장 높은 조합은?',
+          question: '다음 색상들을 명도가 낮은 순서(어두운 → 밝은)대로 배열한 것은?',
           options: [
-            { bg: '#FFFFFF', text: '#FFFF00', correct: false },
-            { bg: '#000000', text: '#FFFFFF', correct: true },
-            { bg: '#FF0000', text: '#00FF00', correct: false },
-            { bg: '#0000FF', text: '#FF00FF', correct: false }
+            { colors: ['#2C3E50', '#9B59B6', '#3498DB', '#F1C40F'], correct: true },
+            { colors: ['#9B59B6', '#2C3E50', '#3498DB', '#F1C40F'], correct: false },
+            { colors: ['#F1C40F', '#3498DB', '#9B59B6', '#2C3E50'], correct: false },
+            { colors: ['#2C3E50', '#3498DB', '#9B59B6', '#F1C40F'], correct: false }
           ],
-          explanation: '검정 배경에 흰 글씨(#000000-#FFFFFF)는 최대 명도 대비(255)를 제공해 가장 읽기 쉽습니다. 흰 배경에 노랑 글씨는 명도가 비슷해 구분이 어렵고, 빨강-초록과 파랑-마젠타는 색상 대비만 있고 명도 대비가 부족합니다.',
-          principle: '가독성은 명도 대비에 의해 결정됩니다. 색상 대비만으로는 가독성을 보장할 수 없습니다.'
+          explanation: '정답은 다크블루(#2C3E50, RGB 평균 약 62) → 보라(#9B59B6, RGB 평균 약 136) → 파랑(#3498DB, RGB 평균 약 146) → 노랑(#F1C40F, RGB 평균 약 208)입니다. 보라와 파랑이 비슷해 보이지만 보라가 약간 더 어둡습니다.',
+          principle: '명도는 색상과 무관하게 순수한 밝기를 나타냅니다. 비슷한 색상 계열이라도 명도 차이가 있습니다.'
         },
         {
           type: 'B',
@@ -231,13 +231,13 @@
           difficulty: 'easy',
           question: '다음 중 채도 대비가 가장 큰 조합은?',
           options: [
-            { colors: ['#FF0000', '#FFB6C1'], correct: true },
-            { colors: ['#FF0000', '#FF4500'], correct: false },
-            { colors: ['#FFB6C1', '#FFC0CB'], correct: false },
-            { colors: ['#FF6347', '#FF7F50'], correct: false }
+            { colors: ['#FF6B6B', '#FF8989', '#FFA7A7'], correct: false },
+            { colors: ['#FF0000', '#FFB3B3', '#FFE6E6'], correct: true },
+            { colors: ['#CC8080', '#CC9999', '#CCB3B3'], correct: false },
+            { colors: ['#E74C3C', '#EC7063', '#F1948A'], correct: false }
           ],
-          explanation: '순수 빨강(#FF0000)과 연한 핑크(#FFB6C1)는 같은 빨강 계열이지만 채도 차이가 큽니다. 순빨강은 최대 채도이고, 연핑크는 흰색이 섞여 채도가 낮습니다.',
-          principle: '채도 대비는 같은 색상 계열 내에서 선명도의 차이로 나타납니다.'
+          explanation: '순수 빨강(#FF0000)과 극저채도 핑크(#FFB3B3, #FFE6E6)의 조합이 채도 대비가 가장 큽니다. 순색과 파스텔을 함께 사용하면 최대 채도 대비를 만들 수 있습니다. 다른 조합들은 모두 비슷한 채도 범위 내에 있어 대비가 작습니다.',
+          principle: '채도 대비는 순색과 파스텔을 함께 사용할 때 극대화됩니다. 강조와 배경의 구분이 명확해집니다.'
         },
         {
           type: 'C',
@@ -245,13 +245,13 @@
           difficulty: 'easy',
           question: '다음 중 채도가 가장 낮은 색상은?',
           options: [
-            { colors: ['#FF1493'], correct: false },
-            { colors: ['#C0C0C0'], correct: true },
-            { colors: ['#00CED1'], correct: false },
-            { colors: ['#9370DB'], correct: false }
+            { colors: ['#FF6B6B', '#FFB347', '#FFA07A'], correct: false },
+            { colors: ['#87CEEB', '#98D8E8', '#B0E0E6'], correct: true },
+            { colors: ['#FF1493', '#FF69B4', '#FFB6C1'], correct: false },
+            { colors: ['#32CD32', '#90EE90', '#98FB98'], correct: false }
           ],
-          explanation: '은색(Silver, #C0C0C0)은 무채색으로 채도가 0입니다. 딥핑크(#FF1493), 다크터콰이즈(#00CED1), 미디엄퍼플(#9370DB)은 모두 유채색으로 채도를 가집니다.',
-          principle: '무채색(회색 계열)은 채도가 0이며, 유채색은 회색에서 멀어질수록 채도가 높아집니다.'
+          explanation: '연한 하늘색 조합(스카이블루, 연청색, 파우더블루)이 가장 채도가 낮습니다. 채도는 색의 선명도를 나타내며, 흰색이 섞일수록 채도가 낮아집니다. 산호색, 핑크, 연두 조합들은 더 선명하여 채도가 높습니다.',
+          principle: '파스텔 톤 중에서도 색상에 따라 채도 차이가 있으며, 청색 계열이 상대적으로 차분합니다.'
         },
         {
           type: 'C',
@@ -259,13 +259,13 @@
           difficulty: 'medium',
           question: '다음 중 채도가 가장 높은 색상은?',
           options: [
-            { colors: ['#FF69B4'], correct: false },
-            { colors: ['#FF1493'], correct: true },
-            { colors: ['#FFB6C1'], correct: false },
-            { colors: ['#FFC0CB'], correct: false }
+            { colors: ['#FF8A80', '#FFAB91', '#FFCCBC'], correct: false },
+            { colors: ['#80CBC4', '#A7FFEB', '#B2DFDB'], correct: false },
+            { colors: ['#F48FB1', '#F06292', '#EC407A'], correct: true },
+            { colors: ['#9FA8DA', '#7986CB', '#9575CD'], correct: false }
           ],
-          explanation: '딥핑크(#FF1493)가 가장 채도가 높습니다. 핫핑크(#FF69B4)도 선명하지만 딥핑크보다 약간 덜 포화되어 있고, 라이트핑크(#FFB6C1)와 핑크(#FFC0CB)는 흰색이 많이 섞여 채도가 낮습니다.',
-          principle: '같은 색상 계열에서 가장 선명하고 순수한 색이 최고 채도를 가집니다.'
+          explanation: '핑크 계열(#F48FB1, #F06292, #EC407A)이 가장 채도가 높습니다. 같은 밝기 범위지만 순색에 가까워 RGB 값의 차이가 큽니다. 산호색, 터쿼이즈, 라벤더는 비슷한 밝기지만 회색이나 흰색이 더 많이 섞여 채도가 낮습니다.',
+          principle: '비슷한 밝기에서도 순색에 가까울수록 채도가 높습니다. RGB 최대-최소값의 차이로 판단합니다.'
         },
         {
           type: 'C',
@@ -273,27 +273,27 @@
           difficulty: 'hard',
           question: '다음 중 진정한 무채색(채도 0)은?',
           options: [
-            { colors: ['#F5F5F5'], correct: false },
-            { colors: ['#DCDCDC'], correct: true },
-            { colors: ['#F0F8FF'], correct: false },
-            { colors: ['#FFF5EE'], correct: false }
+            { colors: ['#E8E8E8', '#EBEBEB', '#EEEEEE'], correct: true },
+            { colors: ['#E8E6E3', '#EBE9E6', '#EEECEA'], correct: false },
+            { colors: ['#E3E8E8', '#E6EBEB', '#EAEEEE'], correct: false },
+            { colors: ['#E8E3E8', '#EBE6EB', '#EEEAEE'], correct: false }
           ],
-          explanation: '개인스보로(Gainsboro, #DCDCDC)는 RGB 값이 모두 220으로 같아 진정한 무채색입니다. 화이트스모크(#F5F5F5)는 245로 같지만 너무 밝고, 앨리스블루(#F0F8FF)는 파란 기미가, 시셸(#FFF5EE)은 주황 기미가 있습니다.',
-          principle: '진정한 무채색은 RGB 값이 정확히 같아야 하며, 어떤 색상 경향도 없어야 합니다.'
+          explanation: '첫 번째 조합(#E8E8E8, #EBEBEB, #EEEEEE)만이 RGB 값이 모두 동일한 진정한 무채색입니다. 나머지는 베이지 기미(R>G,B), 청록 기미(G,B>R), 라벤더 기미(R,B>G)가 있습니다. 무채색은 RGB 값이 완전히 같아야 하며, 1-2 차이도 색감을 만듭니다.',
+          principle: '무채색은 R=G=B 조건을 만족해야 합니다. 아무리 미묘해도 RGB 값이 다르면 색상(Hue)이 존재합니다.'
         },
         {
           type: 'C',
           id: 'C5',
           difficulty: 'medium',
-          question: '다음 중 채도가 점진적으로 감소하는 그라데이션은?',
+          question: '자연스러운 그라데이션 조합은?',
           options: [
-            { colors: ['#0000FF', '#4169E1', '#6495ED', '#87CEEB'], correct: true },
-            { colors: ['#FF0000', '#FF4500', '#FF8C00', '#FFA500'], correct: false },
-            { colors: ['#008000', '#00FF00', '#7FFF00', '#FFFF00'], correct: false },
-            { colors: ['#800080', '#9932CC', '#BA55D3', '#DA70D6'], correct: false }
+            { colors: ['#FF00FF', '#00FFFF', '#FFFF00'], correct: false },
+            { colors: ['#667EEA', '#764BA2', '#F093FB'], correct: true },
+            { colors: ['#FF0000', '#00FF00', '#0000FF'], correct: false },
+            { colors: ['#FFFF00', '#FF00FF', '#00FFFF'], correct: false }
           ],
-          explanation: '순파랑에서 스카이블루로 가는 첫 번째 옵션은 점점 흰색이 섞이며 채도가 감소합니다. 나머지는 색상이 변하거나(주황→노랑, 초록→노랑) 명도만 변합니다.',
-          principle: '채도 그라데이션은 같은 색상 계열 내에서 회색이 점진적으로 추가되는 변화입니다.'
+          explanation: '블루-퍼플-핑크는 색상환에서 인접한 색들로, 채도와 명도가 점진적으로 변화합니다. 이는 자연광의 변화와 유사해 시각적으로 편안합니다.',
+          principle: '유사색 그라데이션이 보색 그라데이션보다 자연스럽습니다.'
         }
       ];
 
@@ -698,13 +698,6 @@
                 <p className="text-center text-sm text-gray-500 mt-4 mb-4">
                   위 이미지를 스크린샷 찍어서 SNS에 공유해보세요! 📸
                 </p>
-                
-                <button
-                  onClick={() => alert('🔴 버튼 작동 테스트!')}
-                  className="w-full mb-3 px-4 py-2 bg-red-500 text-white rounded-lg font-bold"
-                >
-                  🔴 테스트 - 이 버튼 눌러보세요!
-                </button>
                 
                 <div className="flex gap-3 justify-center">
                   <button
