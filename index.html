@@ -774,15 +774,49 @@
   </button>
 
   <div className="grid grid-cols-3 gap-2">
-    <button
-  onClick={() => {
-    alert('📱 인스타그램 공유 방법:\n\n1. 위 "이미지 다운로드" 버튼 클릭\n2. 다운받은 이미지를 인스타그램에 업로드\n3. 링크는 프로필이나 스토리에 추가!');
+   <button
+  onClick={async () => {
+    // 모바일인지 확인
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile && navigator.share) {
+      // 모바일: 이미지를 공유 메뉴로
+      try {
+        const element = document.getElementById('share-card');
+        const canvas = await html2canvas(element, {
+          scale: 2,
+          backgroundColor: null,
+          logging: false
+        });
+        
+        canvas.toBlob(async (blob) => {
+          const file = new File([blob], 'CAQ-result.png', { type: 'image/png' });
+          const shareData = {
+            files: [file],
+            title: 'C.A.Q 테스트 결과',
+            text: `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%!`
+          };
+          
+          if (navigator.canShare && navigator.canShare(shareData)) {
+            await navigator.share(shareData);
+          } else {
+            alert('이 기기는 이미지 공유를 지원하지 않습니다.');
+          }
+        });
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          alert('공유 실패: ' + error.message);
+        }
+      }
+    } else {
+      // PC: 안내 메시지
+      alert('📱 인스타그램 공유 방법:\n\n1. "이미지 다운로드" 버튼 클릭\n2. 다운받은 이미지를 인스타그램에 업로드\n3. 링크는 프로필이나 스토리에 추가!');
+    }
   }}
   className="px-3 py-2 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 text-white rounded-lg font-medium text-sm"
 >
   인스타
 </button>
-
     <button
       onClick={() => {
         const url = encodeURIComponent(window.location.href);
