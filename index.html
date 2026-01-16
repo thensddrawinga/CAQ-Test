@@ -976,43 +976,48 @@
               </div>
             </div>
 
-            <div className="fixed bottom-8 right-8 w-10 h-10">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <defs>
-                  <linearGradient id="silverBase" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#E8E8E8', stopOpacity: 1 }} />
-                    <stop offset="50%" style={{ stopColor: '#C0C0C0', stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: '#A8A8A8', stopOpacity: 1 }} />
-                  </linearGradient>
-                  <linearGradient id="metalShine" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#FFFFFF', stopOpacity: 0.4 }} />
-                    <stop offset="50%" style={{ stopColor: '#FFFFFF', stopOpacity: 0 }} />
-                    <stop offset="100%" style={{ stopColor: '#FFFFFF', stopOpacity: 0.3 }} />
-                  </linearGradient>
-                  <linearGradient id="rainbowSheen" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: '#FF0080', stopOpacity: 0.2 }} />
-                    <stop offset="20%" style={{ stopColor: '#FF8C00', stopOpacity: 0.2 }} />
-                    <stop offset="40%" style={{ stopColor: '#FFD700', stopOpacity: 0.2 }} />
-                    <stop offset="60%" style={{ stopColor: '#00FF00', stopOpacity: 0.2 }} />
-                    <stop offset="80%" style={{ stopColor: '#00BFFF', stopOpacity: 0.2 }} />
-                    <stop offset="100%" style={{ stopColor: '#8A2BE2', stopOpacity: 0.2 }} />
-                  </linearGradient>
-                  <clipPath id="roundedSquare">
-                    <rect x="5" y="5" width="90" height="90" rx="20" ry="20"/>
-                  </clipPath>
-                </defs>
-                <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#silverBase)" stroke="#888" strokeWidth="1"/>
-                <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#metalShine)" clipPath="url(#roundedSquare)"/>
-                <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#rainbowSheen)" clipPath="url(#roundedSquare)"/>
-                <path d="M50 20 L54 38 L72 38 L58 48 L62 66 L50 56 L38 66 L42 48 L28 38 L46 38 Z" 
-                      fill="#F0F0F0" stroke="#B0B0B0" strokeWidth="0.5"/>
-                <circle cx="50" cy="50" r="13" fill="url(#silverBase)" stroke="#A0A0A0" strokeWidth="1"/>
-                <circle cx="47" cy="47" r="5" fill="#FFFFFF" opacity="0.6"/>
-                <text x="50" y="49" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#555">C.A.Q</text>
-                <text x="50" y="56" textAnchor="middle" fontSize="4.5" fill="#777">CERTIFIED</text>
-              </svg>
-            </div>
-          </div>
+           <div className="fixed bottom-8 right-8 flex items-end gap-3">
+  <div className="text-right">
+    <p className="text-xs text-gray-400 font-light tracking-wide">C.A.Q STANDARD TEST</p>
+    <p className="text-[10px] text-gray-300 font-light">Version 1.0</p>
+  </div>
+  <div className="w-10 h-10">
+    <svg viewBox="0 0 100 100" className="w-full h-full">
+      <defs>
+        <linearGradient id="silverBase" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#E8E8E8', stopOpacity: 1 }} />
+          <stop offset="50%" style={{ stopColor: '#C0C0C0', stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: '#A8A8A8', stopOpacity: 1 }} />
+        </linearGradient>
+        <linearGradient id="metalShine" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#FFFFFF', stopOpacity: 0.4 }} />
+          <stop offset="50%" style={{ stopColor: '#FFFFFF', stopOpacity: 0 }} />
+          <stop offset="100%" style={{ stopColor: '#FFFFFF', stopOpacity: 0.3 }} />
+        </linearGradient>
+        <linearGradient id="rainbowSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: '#FF0080', stopOpacity: 0.2 }} />
+          <stop offset="20%" style={{ stopColor: '#FF8C00', stopOpacity: 0.2 }} />
+          <stop offset="40%" style={{ stopColor: '#FFD700', stopOpacity: 0.2 }} />
+          <stop offset="60%" style={{ stopColor: '#00FF00', stopOpacity: 0.2 }} />
+          <stop offset="80%" style={{ stopColor: '#00BFFF', stopOpacity: 0.2 }} />
+          <stop offset="100%" style={{ stopColor: '#8A2BE2', stopOpacity: 0.2 }} />
+        </linearGradient>
+        <clipPath id="roundedSquare">
+          <rect x="5" y="5" width="90" height="90" rx="20" ry="20"/>
+        </clipPath>
+      </defs>
+      <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#silverBase)" stroke="#888" strokeWidth="1"/>
+      <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#metalShine)" clipPath="url(#roundedSquare)"/>
+      <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#rainbowSheen)" clipPath="url(#roundedSquare)"/>
+      <path d="M50 20 L54 38 L72 38 L58 48 L62 66 L50 56 L38 66 L42 48 L28 38 L46 38 Z" 
+            fill="#F0F0F0" stroke="#B0B0B0" strokeWidth="0.5"/>
+      <circle cx="50" cy="50" r="13" fill="url(#silverBase)" stroke="#A0A0A0" strokeWidth="1"/>
+      <circle cx="47" cy="47" r="5" fill="#FFFFFF" opacity="0.6"/>
+      <text x="50" y="49" textAnchor="middle" fontSize="8" fontWeight="bold" fill="#555">C.A.Q</text>
+      <text x="50" y="56" textAnchor="middle" fontSize="4.5" fill="#777">CERTIFIED</text>
+    </svg>
+  </div>
+</div>
         );
       }
 
