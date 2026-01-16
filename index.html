@@ -702,10 +702,21 @@
                       </span>
                     </div>
                     <div className="text-sm font-semibold mb-1">
-                      {results.aqScore >= 128 ? '색채의 마에스트로' :
-                       results.aqScore >= 113 ? '컬러 천재' :
-                       results.aqScore >= 98 ? '색감 보유자' :
-                       results.aqScore >= 83 ? '색채 입문자' : '색채 초보'}
+                     {(() => {
+  const maxScore = Math.max(results.typeAScore, results.typeBScore, results.typeCScore);
+  const minScore = Math.min(results.typeAScore, results.typeBScore, results.typeCScore);
+  const scoreDiff = maxScore - minScore;
+  
+  if (scoreDiff <= 15) {
+    return '올라운더';
+  } else if (maxScore === results.typeAScore) {
+    return '컬러 마에스트로';
+  } else if (maxScore === results.typeBScore) {
+    return '명암의 달인';
+  } else {
+    return '채도의 마술사';
+  }
+})()}
                     </div>
                     <div className="text-base font-semibold mb-2">
                       상위 {results.percentile}%
