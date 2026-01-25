@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테스트 가이드 - C.A.Q Test</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 p-4 py-12 pb-24">
+    <div class="max-w-4xl mx-auto space-y-6">
+      <!-- Header Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">테스트 가이드</h1>
+        <p class="text-sm text-gray-500">정확한 측정을 위한 준비와 방법</p>
+      </div>
+
+      <!-- Quick Start Card -->
+      <div class="p-8 rounded-lg bg-gradient-to-br from-blue-100 to-purple-100 border-2 border-blue-200 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">빠른 시작</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-white/70 p-5 rounded-lg">
+            <div class="text-3xl mb-2">⏱️</div>
+            <h3 class="font-bold text-gray-900 mb-2">소요 시간</h3>
+            <p class="text-sm text-gray-700">약 5-10분<br>(문항당 평균 30초)</p>
+          </div>
+          <div class="bg-white/70 p-5 rounded-lg">
+            <div class="text-3xl mb-2">📱</div>
+            <h3 class="font-bold text-gray-900 mb-2">사용 환경</h3>
+            <p class="text-sm text-gray-700">PC, 태블릿, 모바일<br>(PC 권장)</p>
+          </div>
+          <div class="bg-white/70 p-5 rounded-lg">
+            <div class="text-3xl mb-2">🔄</div>
+            <h3 class="font-bold text-gray-900 mb-2">재시험</h3>
+            <p class="text-sm text-gray-700">횟수 제한 없음<br>(2주 간격 권장)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preparation Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">테스트 전 준비사항</h2>
+        
+        <div class="space-y-6">
+          <!-- Display Settings -->
+          <div class="border-l-4 border-blue-500 pl-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">1. 디스플레이 설정 (중요!)</h3>
+            
+            <div class="space-y-4">
+              <div class="bg-blue-50 p-5 rounded-lg">
+                <h4 class="font-bold text-blue-900 mb-2">✅ 밝기 조절</h4>
+                <p class="text-sm text-blue-800 mb-3">
+                  <strong>권장:</strong> 80% 이상<br>
+                  너무 어두우면 명도 구분이 어렵고, 너무 밝으면 눈이 피로합니다.
+                </p>
+                <div class="bg-white/50 p-3 rounded text-xs">
+                  <p class="font-semibold mb-1">조절 방법:</p>
+                  <p>• Windows: 설정 → 시스템 → 디스플레이 → 밝기</p>
+                  <p>• Mac: 시스템 환경설정 → 디스플레이 → 밝기</p>
+                  <p>• 모바일: 설정 → 디스플레이 → 밝기</p>
+                </div>
+              </div>
+
+              <div class="bg-green-50 p-5 rounded-lg">
+                <h4 class="font-bold text-green-900 mb-2">✅ 다크모드 해제</h4>
+                <p class="text-sm text-green-800">
+                  다크모드가 켜져있으면 색 인식에 영향을 줄 수 있습니다. 
+                  테스트 중에는 라이트 모드를 사용하세요.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 p-5 rounded-lg">
+                <h4 class="font-bold text-purple-900 mb-2">✅ 나이트 시프트/블루라이트 차단 끄기</h4>
+                <p class="text-sm text-purple-800">
+                  색온도를 변경하는 기능은 반드시 꺼야 정확한 측정이 가능합니다.
+                </p>
+              </div>
+
+              <div class="bg-orange-50 p-5 rounded-lg">
+                <h4 class="font-bold text-orange-900 mb-2">💡 권장 디스플레이</h4>
+                <p class="text-sm text-orange-800">
+                  <strong>최적:</strong> IPS 패널 (색 재현율 높음)<br>
+                  <strong>양호:</strong> VA 패널<br>
+                  <strong>주의:</strong> TN 패널 (시야각에 따라 색 왜곡)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lighting Conditions -->
+          <div class="border-l-4 border-green-500 pl-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">2. 조명 환경</h3>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-green-50 p-5 rounded-lg">
+                <h4 class="font-bold text-green-900 mb-2">✅ 좋은 조명</h4>
+                <ul class="text-sm text-green-800 space-y-2">
+                  <li>• 간접조명 (눈부심 없음)</li>
+                  <li>• 자연광 (창문 옆, 흐린 날)</li>
+                  <li>• 백색 LED (6000K 전후)</li>
+                  <li>• 균일한 조명</li>
+                </ul>
+              </div>
+
+              <div class="bg-red-50 p-5 rounded-lg">
+                <h4 class="font-bold text-red-900 mb-2">❌ 피해야 할 조명</h4>
+                <ul class="text-sm text-red-800 space-y-2">
+                  <li>• 직사광선 (화면에 반사)</li>
+                  <li>• 형광등 직접 조명</li>
+                  <li>• 유색 조명 (색 인식 왜곡)</li>
+                  <li>• 깜빡이는 조명</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-yellow-50 p-4 rounded-lg mt-4">
+              <p class="text-sm text-yellow-900">
+                <strong>💡 Tip:</strong> 방을 약간 어둡게 하고 디스플레이 밝기를 높이는 것이 
+                강한 실내 조명보다 나을 수 있습니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- Physical Condition -->
+          <div class="border-l-4 border-purple-500 pl-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">3. 신체 컨디션</h3>
+            
+            <div class="space-y-3">
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <p class="text-sm text-purple-800">
+                  <strong>✅ 눈이 피로하지 않은 상태</strong><br>
+                  장시간 화면을 본 직후보다는 충분히 쉰 후에 테스트하세요.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <p class="text-sm text-purple-800">
+                  <strong>✅ 집중할 수 있는 시간대</strong><br>
+                  너무 피곤하거나 졸린 상태에서는 판단력이 떨어질 수 있습니다.
+                </p>
+              </div>
+
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <p class="text-sm text-purple-800">
+                  <strong>✅ 안경/렌즈 착용</strong><br>
+                  시력이 나쁘다면 교정 도구를 반드시 착용하세요.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Test Process Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">테스트 진행 방법</h2>
+        
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-blue-600 text-lg">
+              1
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">문제 읽기</h3>
+              <p class="text-sm text-gray-700">
+                각 문항의 지시사항을 정확히 읽으세요. 
+                "가장 부조화한", "가장 밝은", "가장 어울리는" 등의 키워드에 주목하세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-green-600 text-lg">
+              2
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">직관적으로 판단</h3>
+              <p class="text-sm text-gray-700">
+                너무 오래 고민하지 마세요. 첫인상과 직관이 종종 가장 정확합니다. 
+                빠른 응답에는 시간 보너스가 주어집니다.
+              </p>
+              <div class="bg-green-50 p-3 rounded mt-2">
+                <p class="text-xs text-green-800">
+                  <strong>시간 보너스:</strong> 3초 이내(+10점), 5초 이내(+8점), 7초 이내(+6점)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-purple-600 text-lg">
+              3
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">답변 선택</h3>
+              <p class="text-sm text-gray-700">
+                선택지를 클릭하면 자동으로 다음 문제로 넘어갑니다. 
+                실수로 클릭했다면 "이전 문제로" 버튼으로 돌아갈 수 있습니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-orange-600 text-lg">
+              4
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-gray-900 mb-2">일관성 유지</h3>
+              <p class="text-sm text-gray-700">
+                중간에 디스플레이 설정을 바꾸거나 환경을 크게 변경하지 마세요. 
+                한 번 시작하면 끝까지 같은 조건에서 진행하세요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question Types Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">문항 유형 이해하기</h2>
+        
+        <div class="space-y-6">
+          <!-- Type A -->
+          <div class="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-lg border-2 border-orange-200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="text-3xl">🎨</div>
+              <h3 class="text-xl font-bold text-gray-900">색상 결합 문항 (Type A)</h3>
+            </div>
+            <p class="text-sm text-gray-700 mb-4">
+              여러 색상의 조합을 보고 조화로운지, 부조화한지 판단하거나 
+              추가로 어울리는 색을 선택하는 문항입니다.
+            </p>
+            <div class="bg-white/50 p-4 rounded">
+              <p class="text-xs font-semibold mb-2">판단 포인트:</p>
+              <ul class="text-xs space-y-1">
+                <li>• 색상환에서의 위치 관계 (보색, 유사색, 삼각배색)</li>
+                <li>• 색들이 서로 충돌하지 않는지</li>
+                <li>• 전체적인 균형감</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Type B -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border-2 border-blue-200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="text-3xl">💡</div>
+              <h3 class="text-xl font-bold text-gray-900">명도 조절 문항 (Type B)</h3>
+            </div>
+            <p class="text-sm text-gray-700 mb-4">
+              여러 색상 중 가장 밝거나 어두운 것을 찾거나, 
+              명도 대비가 큰 조합을 선택하는 문항입니다.
+            </p>
+            <div class="bg-white/50 p-4 rounded">
+              <p class="text-xs font-semibold mb-2">판단 포인트:</p>
+              <ul class="text-xs space-y-1">
+                <li>• 색상(Hue)을 배제하고 순수한 밝기만 비교</li>
+                <li>• 흑백으로 변환했을 때를 상상</li>
+                <li>• 미세한 차이도 주의깊게 관찰</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Type C -->
+          <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-lg border-2 border-green-200">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="text-3xl">✨</div>
+              <h3 class="text-xl font-bold text-gray-900">채도 배분 문항 (Type C)</h3>
+            </div>
+            <p class="text-sm text-gray-700 mb-4">
+              색의 선명도를 비교하거나, 채도 대비가 적절한 조합을 선택하는 문항입니다.
+            </p>
+            <div class="bg-white/50 p-4 rounded">
+              <p class="text-xs font-semibold mb-2">판단 포인트:</p>
+              <ul class="text-xs space-y-1">
+                <li>• 순색 vs 파스텔 vs 무채색</li>
+                <li>• 흰색/회색이 얼마나 섞였는지</li>
+                <li>• 전체적인 톤의 일관성</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tips Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">고득점 팁</h2>
+        
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-blue-50 p-5 rounded-lg">
+            <h4 class="font-bold text-blue-900 mb-2">💡 Tip 1: 스크린 거리</h4>
+            <p class="text-sm text-blue-800">
+              화면에서 50-70cm 정도 떨어져 보세요. 
+              너무 가까우면 개별 픽셀이 보이고, 너무 멀면 디테일을 놓칠 수 있습니다.
+            </p>
+          </div>
+
+          <div class="bg-green-50 p-5 rounded-lg">
+            <h4 class="font-bold text-green-900 mb-2">💡 Tip 2: 눈 깜빡임</h4>
+            <p class="text-sm text-green-800">
+              색을 비교할 때 눈을 한 번 깜빡이고 다시 보면 
+              첫인상이 새롭게 느껴져 더 정확한 판단이 가능합니다.
+            </p>
+          </div>
+
+          <div class="bg-purple-50 p-5 rounded-lg">
+            <h4 class="font-bold text-purple-900 mb-2">💡 Tip 3: 주변 색 차단</h4>
+            <p class="text-sm text-purple-800">
+              가능하다면 화면 주변의 다른 색깔이 보이지 않도록 하세요. 
+              주변 색이 판단에 영향을 줄 수 있습니다.
+            </p>
+          </div>
+
+          <div class="bg-orange-50 p-5 rounded-lg">
+            <h4 class="font-bold text-orange-900 mb-2">💡 Tip 4: 연습의 중요성</h4>
+            <p class="text-sm text-orange-800">
+              여러 번 테스트하면 문항 패턴에 익숙해져 점수가 오를 수 있지만, 
+              실제 색채 감각 향상을 위해서는 2주 간격을 두고 재측정하세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Interpretation Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">결과 해석 방법</h2>
+        
+        <div class="space-y-4">
+          <div class="bg-gray-50 p-5 rounded-lg">
+            <h3 class="font-bold text-gray-900 mb-3">C.A.Q 총점</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              70~145점 범위로 측정되며, 세 가지 영역(색상 결합, 명도 조절, 채도 배분)의 
+              종합 점수입니다. 백분위 점수를 함께 제공하여 상대적 위치를 알 수 있습니다.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-5 rounded-lg">
+            <h3 class="font-bold text-gray-900 mb-3">영역별 세부 점수</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              각 영역의 점수를 비교하여 강점과 약점을 파악하세요. 
+              점수 차이가 20점 이상 나면 특정 영역에 특화된 것입니다.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-5 rounded-lg">
+            <h3 class="font-bold text-gray-900 mb-3">평균 응답 시간</h3>
+            <p class="text-sm text-gray-700 mb-2">
+              빠른 응답은 직관적 색채 감각을 의미합니다. 
+              하지만 정확도가 더 중요하므로 속도보다는 정답률에 집중하세요.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Improvement Tips Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">색채 감각 향상 방법</h2>
+        
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="text-2xl flex-shrink-0">📚</div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">색채 이론 학습</h4>
+              <p class="text-sm text-gray-700">
+                색상환, 보색, 유사색 등 기본 색채 이론을 공부하세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="text-2xl flex-shrink-0">🎨</div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">실제 작업 경험</h4>
+              <p class="text-sm text-gray-700">
+                디자인 툴(Figma, Photoshop 등)로 직접 색을 다루며 경험을 쌓으세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="text-2xl flex-shrink-0">👁️</div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">관찰 훈련</h4>
+              <p class="text-sm text-gray-700">
+                일상에서 마주하는 색들을 의식적으로 관찰하고 분석하세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="text-2xl flex-shrink-0">🖼️</div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">레퍼런스 수집</h4>
+              <p class="text-sm text-gray-700">
+                좋은 배색의 디자인, 사진, 작품을 수집하고 분석하세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="text-2xl flex-shrink-0">🔄</div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">주기적 재측정</h4>
+              <p class="text-sm text-gray-700">
+                2-4주 간격으로 재측정하여 발전 상황을 확인하세요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Card -->
+      <div class="p-8 rounded-lg bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">자주 묻는 질문</h2>
+        
+        <div class="space-y-3">
+          <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+            <summary class="font-semibold text-gray-900">색맹/색약이 있어도 테스트할 수 있나요?</summary>
+            <p class="mt-2 text-sm text-gray-700">
+              본 테스트는 정상 색각을 기준으로 설계되었습니다. 
+              색각 이상이 있는 경우 정확한 측정이 어려울 수 있으며, 
+              전문적인 색각 검사를 권장합니다.
+            </p>
+          </details>
+
+          <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+            <summary class="font-semibold text-gray-900">모바일에서 테스트해도 정확한가요?</summary>
+            <p class="mt-2 text-sm text-gray-700">
+              모바일 환경에 최적화되어 있지만, 화면 크기와 색 정확도 때문에 
+              PC(IPS 모니터)를 권장합니다. 모바일로 테스트할 경우 
+              밝기를 최대로 하고 실내 조명을 적절히 조절하세요.
+            </p>
+          </details>
+
+          <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+            <summary class="font-semibold text-gray-900">중간에 끊겼다가 다시 시작할 수 있나요?</summary>
+            <p class="mt-2 text-sm text-gray-700">
+              현재는 진행 상황이 자동 저장되지 않습니다. 
+              한 번 시작하면 끝까지 완료하는 것을 권장합니다.
+            </p>
+          </details>
+
+          <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+            <summary class="font-semibold text-gray-900">점수가 너무 낮게 나왔어요. 왜 그런가요?</summary>
+            <p class="mt-2 text-sm text-gray-700">
+              디스플레이 설정(밝기, 나이트 시프트)이 적절하지 않거나, 
+              조명 환경이 좋지 않았을 가능성이 있습니다. 
+              권장 설정을 확인한 후 재측정해보세요.
+            </p>
+          </details>
+
+          <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+            <summary class="font-semibold text-gray-900">여러 번 테스트하면 점수가 올라가나요?</summary>
+            <p class="mt-2 text-sm text-gray-700">
+              문항을 외우면 점수가 올라갈 수 있지만, 
+              이는 실제 색채 감각의 향상을 의미하지 않습니다. 
+              의미 있는 재측정을 위해서는 2주 이상 간격을 두는 것을 권장합니다.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA Card -->
+      <div class="p-8 rounded-lg bg-gradient-to-br from-purple-100 to-blue-100 border-2 border-purple-200 shadow-xl text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">준비되셨나요?</h2>
+        <p class="text-gray-700 mb-6">
+          최적의 환경에서 당신의 진정한 색채 감각을 측정해보세요!
+        </p>
+        <a href="index.html" class="inline-block px-8 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-bold text-lg">
+          테스트 시작하기 →
+        </a>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="index.html" class="flex-1 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-center font-medium">
+          메인으로
+        </a>
+        <a href="about.html" class="flex-1 px-6 py-3 bg-white/70 backdrop-blur-lg border border-white/20 rounded-lg hover:bg-white/90 transition-colors text-center font-medium text-gray-900">
+          C.A.Q 소개
+        </a>
+        <a href="contact.html" class="flex-1 px-6 py-3 bg-white/70 backdrop-blur-lg border border-white/20 rounded-lg hover:bg-white/90 transition-colors text-center font-medium text-gray-900">
+          연락처
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-top: 1px solid rgba(229, 231, 235, 1); padding: 12px 16px; z-index: 50;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; color: rgb(75, 85, 99);">
+      <p style="margin: 0;">© 2026 C.A.Q Test</p>
+      <div style="display: flex; gap: 12px;">
+        <a href="about.html" style="color: rgb(75, 85, 99); text-decoration: none;">소개</a>
+        <span>|</span>
+        <a href="how-to.html" style="color: rgb(75, 85, 99); text-decoration: none;">가이드</a>
+        <span>|</span>
+        <a href="privacy.html" style="color: rgb(75, 85, 99); text-decoration: none;">개인정보처리방침</a>
+        <span>|</span>
+        <a href="terms.html" style="color: rgb(75, 85, 99); text-decoration: none;">이용약관</a>
+        <span>|</span>
+        <a href="contact.html" style="color: rgb(75, 85, 99); text-decoration: none;">연락처</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
