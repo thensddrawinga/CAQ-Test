@@ -1201,10 +1201,10 @@ const LanguageSelector = ({ language, setLanguage }) => {
             results.typeBScore >= 35 ? 'bg-yellow-100 text-yellow-800' :
             'bg-gray-100 text-gray-800'
           }`}>
-            {results.typeBScore >= 80 ? 'L-U' :
-             results.typeBScore >= 65 ? 'L-A' :
-             results.typeBScore >= 50 ? 'L-N' :
-             results.typeBScore >= 35 ? 'L-B' : 'L-E'}
+            {results.typeBScore >= 80 ? t.levelU :
+             results.typeBScore >= 65 ? t.levelA :
+             results.typeBScore >= 50 ? t.levelN :
+             results.typeBScore >= 35 ? t.levelB : t.levelE}
           </span>
         </div>
       </div>
