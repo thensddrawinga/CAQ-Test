@@ -252,6 +252,12 @@ const LanguageSelector = ({ language, setLanguage }) => {
           q13: "다음 중 채도가 가장 높은 색상은?",
           q14: "다음 중 진정한 무채색(채도 0)은?",
           q15: "자연스러운 그라데이션 조합은?"
+          // 점수 설명
+          scoreUltra: "보이지 않는 차이까지 잡아내는 눈입니다. 남들은 똑같다고 느끼는 아주 미세한 색의 결이나 밝기 차이를 본능적으로 구분해 냅니다. 눈이 받아들이는 정보를 뇌가 거의 완벽하게 재구성하고 있는 상태입니다.",
+          scoreAdvanced: "세상을 남들보다 더 선명하게 보고 있습니다. 복잡한 색채들 사이에서도 질서를 아주 빠르게 찾아냅니다. 표준보다 훨씬 높은 해상도로 세상을 파악하고 있어, 작은 어긋남이나 오차를 쉽게 발견할 수 있는 수준입니다.",
+          scoreNormal: "가장 안정적이고 건강한 감각을 가졌습니다. 우리가 일상에서 마주하는 색과 빛을 왜곡 없이 가장 정확하게 받아들입니다. 대부분의 사람들이 공통적으로 느끼는 색의 기준에 가장 부합하는 표준적인 눈을 가졌습니다.",
+          scoreBasic: "세세한 부분보다는 전체적인 흐름에 강합니다. 아주 미묘한 차이에는 조금 무딘 편이지만, 전체적인 색감이나 큰 윤곽을 파악하는 데는 무리가 없습니다. 정교한 구분보다는 전반적인 분위기를 읽는 데 익숙한 상태입니다.",
+          scoreEntry: "색을 단순하고 명확하게 인지하는 편입니다. 복잡하고 섬세한 농도 차이보다는, 확실하고 뚜렷한 색상 위주로 정보를 받아들입니다. 미세한 구분이 필요한 환경에서는 주변 조명의 도움을 받는 것이 좋습니다.",
         },
         en: {
           // 시작 화면
@@ -326,6 +332,12 @@ const LanguageSelector = ({ language, setLanguage }) => {
           q13: "Which color has the highest saturation?",
           q14: "Which is a true achromatic color (saturation 0)?",
           q15: "Which is a natural gradient combination?"
+          // 점수 설명
+          scoreUltra: "You can detect differences invisible to others. You instinctively distinguish subtle variations in color tone and brightness that most people perceive as identical. Your brain reconstructs visual information with near-perfect accuracy.",
+          scoreAdvanced: "You see the world more vividly than others. You quickly find order among complex color combinations. You perceive the world at a much higher resolution than standard, easily detecting small discrepancies or errors.",
+          scoreNormal: "You have the most stable and healthy color perception. You perceive colors and light most accurately without distortion. You possess standard vision that best aligns with what most people commonly perceive as color standards.",
+          scoreBasic: "You excel at grasping overall patterns rather than fine details. While somewhat insensitive to very subtle differences, you have no trouble understanding overall color schemes and broad outlines. You're more accustomed to reading general atmosphere than precise distinctions.",
+          scoreEntry: "You perceive colors in a simple and clear manner. Rather than complex and subtle tonal differences, you receive information primarily through distinct and vivid colors. In environments requiring fine distinctions, ambient lighting assistance is recommended.",
         },
         ja: {
           // 시작 화면
@@ -400,6 +412,12 @@ const LanguageSelector = ({ language, setLanguage }) => {
           q13: "最も彩度が高い色はどれですか？",
           q14: "真の無彩色（彩度0）はどれですか？",
           q15: "自然なグラデーションの組み合わせはどれですか？"
+          // 점수 설명
+          scoreUltra: "他人には見えない違いまで捉えられる目を持っています。ほとんどの人が同じだと感じる微細な色合いや明るさの違いを本能的に区別できます。目が受け取る情報を脳がほぼ完璧に再構成している状態です。",
+          scoreAdvanced: "世界を他の人よりも鮮明に見ています。複雑な色彩の中でも秩序を非常に速く見つけ出します。標準よりもはるかに高い解像度で世界を把握しており、小さなずれや誤差を簡単に発見できるレベルです。",
+          scoreNormal: "最も安定した健全な感覚を持っています。日常で出会う色と光を歪みなく最も正確に受け取っています。ほとんどの人が共通して感じる色の基準に最も合致する標準的な目を持っています。",
+          scoreBasic: "細部よりも全体的な流れに強いです。非常に微妙な違いにはやや鈍感ですが、全体的な色合いや大きな輪郭を把握することには問題ありません。精密な区別よりも全般的な雰囲気を読むことに慣れています。",
+          scoreEntry: "色をシンプルかつ明確に認識する傾向があります。複雑で繊細な濃度の違いよりも、確実で鮮明な色を中心に情報を受け取ります。微細な区別が必要な環境では周囲の照明の助けを借りることをお勧めします。",
         }
       }[language];
       const questions = [
