@@ -931,10 +931,10 @@ const LanguageSelector = ({ language, setLanguage }) => {
                       results.aqScore >= 83 ? 'bg-yellow-100 text-yellow-800' :
                       'bg-gray-100 text-gray-800'
                     }`}>
-                      {results.aqScore >= 128 ? 'Level-Ultra' :
-                       results.aqScore >= 113 ? 'Level-Advanced' :
-                       results.aqScore >= 98 ? 'Level-Normal' :
-                       results.aqScore >= 83 ? 'Level-Basic' : 'Level-Entry'}
+                      {results.aqScore >= 128 ? t.levelUltra :
+                       results.aqScore >= 113 ? t.levelAdvanced :
+                       results.aqScore >= 98 ? t.levelNormal :
+                       results.aqScore >= 83 ? t.levelBasic : t.levelEntry}
                     </span>
                     <div className="flex items-center gap-4 text-sm text-gray-600">
                       <span>상위 {results.percentile}%</span>
