@@ -1089,7 +1089,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
 
     <div>
       <div className="flex justify-between mb-2">
-        <span className="font-semibold text-gray-700">명도 조절 지수</span>
+        <span className="font-semibold text-gray-700">{t.brightnessIndex}</span>
         <div className="flex items-center gap-2">
           <span className="font-bold text-gray-900">{results.typeBScore}점</span>
           <span className={`text-xs px-2 py-1 rounded font-medium ${
@@ -1114,7 +1114,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
 
     <div>
       <div className="flex justify-between mb-2">
-        <span className="font-semibold text-gray-700">채도 배분 지수</span>
+        <span className="font-semibold text-gray-700">{t.saturationIndex}</span>
         <div className="flex items-center gap-2">
           <span className="font-bold text-gray-900">{results.typeCScore}점</span>
           <span className={`text-xs px-2 py-1 rounded font-medium ${
