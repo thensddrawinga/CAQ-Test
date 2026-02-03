@@ -353,7 +353,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'A',
           id: 'A1',
           difficulty: 'easy',
-          question: '다음 중 가장 부조화한 색상 조합은?',
+          question: t.q1,
           options: [
             { colors: ['#FF6B6B', '#4ECDC4', '#45B7D1'], correct: false },
             { colors: ['#FFA500', '#00FF00', '#FF00FF'], correct: true },
@@ -367,7 +367,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'A',
           id: 'A2',
           difficulty: 'easy',
-          question: '다음 중 가장 부조화한 색상 조합은?',
+          question: t.q2,
           options: [
             { colors: ['#1ABC9C', '#16A085', '#27AE60'], correct: false },
             { colors: ['#F39C12', '#E67E22', '#D35400'], correct: false },
@@ -381,7 +381,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'A',
           id: 'A3',
           difficulty: 'medium',
-          question: '다음 2색 조합에 가장 어울리는 색은?',
+          question: t.q3,
           baseColors: ['#DC143C', '#FFD700'],
           options: [
             { colors: ['#DC143C', '#FFD700', '#FF6347'], correct: false },
@@ -396,7 +396,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'A',
           id: 'A4',
           difficulty: 'medium',
-          question: '다음 2색 조합에 가장 어울리는 색은?',
+          question: t.q4,
           baseColors: ['#98D8C8', '#E6B0FF'],
           options: [
             { colors: ['#98D8C8', '#E6B0FF', '#4A90A4'], correct: false },
@@ -411,7 +411,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'A',
           id: 'A5',
           difficulty: 'hard',
-          question: '다음 2색 조합에 가장 어울리는 색은?',
+          question: t.q5,
           baseColors: ['#6B8E9F', '#CD8B76'],
           options: [
             { colors: ['#6B8E9F', '#CD8B76', '#A4B8C4'], correct: false },
@@ -426,7 +426,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'B',
           id: 'B1',
           difficulty: 'easy',
-          question: '다음 중 명도가 가장 높은(밝은) 색상은?',
+          question: t.q6,
           options: [
             { bg: '#4682B4', text: '#4682B4', correct: false },
             { bg: '#F5DEB3', text: '#F5DEB3', correct: true },
@@ -440,7 +440,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'B',
           id: 'B2',
           difficulty: 'medium',
-          question: '다음 중 명도 대비가 가장 큰 조합은?',
+          question: t.q7,
           options: [
             { colors: ['#E74C3C', '#2980B9'], correct: false },
             { colors: ['#F39C12', '#8E44AD'], correct: true },
@@ -454,7 +454,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'B',
           id: 'B3',
           difficulty: 'medium',
-          question: '다음 색상들을 명도가 낮은 순서(어두운 → 밝은)대로 배열한 것은?',
+          question: t.q8,
           options: [
             { colors: ['#2C3E50', '#9B59B6', '#3498DB', '#F1C40F'], correct: true },
             { colors: ['#9B59B6', '#2C3E50', '#3498DB', '#F1C40F'], correct: false },
@@ -468,7 +468,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'B',
           id: 'B4',
           difficulty: 'hard',
-          question: '다음 2색 사이의 중간 명도를 가진 색은?',
+          question: t.q9,
           baseColors: ['#2E4053', '#F9E79F'],
           options: [
             { bg: '#5D6D7E', text: '#5D6D7E', correct: false },
@@ -483,7 +483,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'B',
           id: 'B5',
           difficulty: 'medium',
-          question: '다음 중 명도가 가장 높은(밝은) 색상은?',
+          question: t.q10,
           options: [
             { bg: '#8B8B8B', text: '#8B8B8B', correct: false },
             { bg: '#919191', text: '#919191', correct: false },
@@ -497,7 +497,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'C',
           id: 'C1',
           difficulty: 'easy',
-          question: '다음 중 채도 대비가 가장 큰 조합은?',
+          question: t.q11,
           options: [
             { colors: ['#FF6B6B', '#FF8989', '#FFA7A7'], correct: false },
             { colors: ['#FF0000', '#FFB3B3', '#FFE6E6'], correct: true },
@@ -511,7 +511,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'C',
           id: 'C2',
           difficulty: 'easy',
-          question: '다음 중 채도가 가장 낮은 색상은?',
+          question: t.q12,
           options: [
             { colors: ['#FF6B6B', '#FFB347', '#FFA07A'], correct: false },
             { colors: ['#87CEEB', '#98D8E8', '#B0E0E6'], correct: true },
@@ -525,7 +525,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'C',
           id: 'C3',
           difficulty: 'medium',
-          question: '다음 중 채도가 가장 높은 색상은?',
+          question: t.q13,
           options: [
             { colors: ['#FF8A80', '#FFAB91', '#FFCCBC'], correct: false },
             { colors: ['#80CBC4', '#A7FFEB', '#B2DFDB'], correct: false },
@@ -539,7 +539,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'C',
           id: 'C4',
           difficulty: 'hard',
-          question: '다음 중 진정한 무채색(채도 0)은?',
+          question: t.q14
           options: [
             { colors: ['#E8E8E8', '#EBEBEB', '#EEEEEE'], correct: true },
             { colors: ['#E8E6E3', '#EBE9E6', '#EEECEA'], correct: false },
@@ -553,7 +553,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
           type: 'C',
           id: 'C5',
           difficulty: 'medium',
-          question: '자연스러운 그라데이션 조합은?',
+          question: t.q15,
           options: [
             { colors: ['#FF00FF', '#00FFFF', '#FFFF00'], correct: false },
             { colors: ['#667EEA', '#764BA2', '#F093FB'], correct: true },
