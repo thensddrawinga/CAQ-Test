@@ -1110,6 +1110,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
       if (!started) {
         return (
           <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 flex items-center justify-center p-4 relative">
+            <LanguageSelector language={language} setLanguage={setLanguage} />
             <div className="max-w-2xl w-full p-8">
               <div className="text-center space-y-6">
                 <h1 className="text-5xl font-bold text-gray-900">C.A.Q Test</h1>
