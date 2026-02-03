@@ -1011,13 +1011,13 @@ const LanguageSelector = ({ language, setLanguage }) => {
   const scoreDiff = maxScore - minScore;
   
   if (scoreDiff <= 15) {
-    return '올라운더';
+    return t.allRounder;
   } else if (maxScore === results.typeAScore) {
-    return '컬러 마에스트로';
+    return t.colorMaestro;
   } else if (maxScore === results.typeBScore) {
-    return '명암의 달인';
+    return t.brightnessExpert;
   } else {
-    return '채도의 마술사';
+    return t.saturationMagician;
   }
 })()}
                     </div>
