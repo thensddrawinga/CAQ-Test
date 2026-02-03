@@ -1170,6 +1170,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 flex items-center justify-center p-4">
+          <LanguageSelector language={language} setLanguage={setLanguage} />
           <div className="max-w-3xl w-full space-y-4">
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div className="bg-gray-900 h-2 rounded-full transition-all" style={{ width: progress + '%' }}></div>
