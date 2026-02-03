@@ -965,16 +965,10 @@ const LanguageSelector = ({ language, setLanguage }) => {
                   </div>
                   
                   <p className="max-w-2xl mx-auto text-sm text-gray-600 leading-relaxed mt-4">
-                    {results.aqScore >= 128 && 
-                      "보이지 않는 차이까지 잡아내는 눈입니다. 남들은 똑같다고 느끼는 아주 미세한 색의 결이나 밝기 차이를 본능적으로 구분해 냅니다. 눈이 받아들이는 정보를 뇌가 거의 완벽하게 재구성하고 있는 상태입니다."}
-                    {results.aqScore >= 113 && results.aqScore < 128 &&
-                      "세상을 남들보다 더 선명하게 보고 있습니다. 복잡한 색채들 사이에서도 질서를 아주 빠르게 찾아냅니다. 표준보다 훨씬 높은 해상도로 세상을 파악하고 있어, 작은 어긋남이나 오차를 쉽게 발견할 수 있는 수준입니다."}
-                    {results.aqScore >= 98 && results.aqScore < 113 &&
-                      "가장 안정적이고 건강한 감각을 가졌습니다. 우리가 일상에서 마주하는 색과 빛을 왜곡 없이 가장 정확하게 받아들입니다. 대부분의 사람들이 공통적으로 느끼는 색의 기준에 가장 부합하는 표준적인 눈을 가졌습니다."}
-                    {results.aqScore >= 83 && results.aqScore < 98 &&
-                      "세세한 부분보다는 전체적인 흐름에 강합니다. 아주 미묘한 차이에는 조금 무딘 편이지만, 전체적인 색감이나 큰 윤곽을 파악하는 데는 무리가 없습니다. 정교한 구분보다는 전반적인 분위기를 읽는 데 익숙한 상태입니다."}
-                    {results.aqScore < 83 &&
-                      "색을 단순하고 명확하게 인지하는 편입니다. 복잡하고 섬세한 농도 차이보다는, 확실하고 뚜렷한 색상 위주로 정보를 받아들입니다. 미세한 구분이 필요한 환경에서는 주변 조명의 도움을 받는 것이 좋습니다."}
+                    {results.aqScore >= 128 ? t.scoreUltra :
+                     results.aqScore >= 113 ? t.scoreAdvanced :
+                     results.aqScore >= 98 ? t.scoreNormal :
+                     results.aqScore >= 83 ? t.scoreBasic : t.scoreEntry}
                   </p>
                 </div>
               </Card>
