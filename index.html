@@ -585,6 +585,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
       if (showCalculating) {
         return (
           <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 flex items-center justify-center p-4">
+            <LanguageSelector language={language} setLanguage={setLanguage} />
             <div className="max-w-md w-full">
               <Card className="p-12 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
                 <div className="flex flex-col items-center space-y-6">
