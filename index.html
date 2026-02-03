@@ -997,7 +997,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
                        results.aqScore >= 83 ? t.levelBasic : t.levelEntry}
                     </span>
                     <div className="flex items-center gap-4 text-sm text-gray-600">
-                      <span>상위 {results.percentile}%</span>
+                      <span>상위 {t.topLabel} {results.percentile}%</span>
                       <span>•</span>
                       <div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
