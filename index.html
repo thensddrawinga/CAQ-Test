@@ -998,10 +998,10 @@ const LanguageSelector = ({ language, setLanguage }) => {
                     <div className="text-5xl font-bold mb-1">{results.aqScore}</div>
                     <div className="bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full mb-1">
                       <span className="text-sm font-bold">
-                        {results.aqScore >= 128 ? 'Level-Ultra' :
-                         results.aqScore >= 113 ? 'Level-Advanced' :
-                         results.aqScore >= 98 ? 'Level-Normal' :
-                         results.aqScore >= 83 ? 'Level-Basic' : 'Level-Entry'}
+                        {results.aqScore >= 128 ? t.levelUltra :
+                         results.aqScore >= 113 ? t.levelAdvanced :
+                         results.aqScore >= 98 ? t.levelNormal :
+                         results.aqScore >= 83 ? t.levelBasic : t.levelEntry}
                       </span>
                     </div>
                     <div className="text-sm font-semibold mb-1">
