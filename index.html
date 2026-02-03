@@ -1237,7 +1237,10 @@ const LanguageSelector = ({ language, setLanguage }) => {
             <LanguageSelector language={language} setLanguage={setLanguage} />
             <div className="max-w-2xl w-full p-8">
               <div className="text-center space-y-6">
-                <h1 className="text-5xl font-bold text-gray-900">C.A.Q Test</h1>
+                <h1 className="text-5xl font-bold text-gray-900">{t.title}</h1>
+                <p className="text-xl text-gray-600">{t.subtitle}</p>
+                <p className="text-lg text-gray-700">{t.description}</p>
+                <p className="text-sm text-gray-500">{t.brightness}</p>
                 <p className="text-xl text-gray-600">Color Aesthetic Quotient</p>
                 <p className="text-lg text-gray-700">색채 감각을 측정하는 표준화된 지능 테스트입니다.</p>
                 <p className="text-sm text-gray-500">정확한 측정을 위해 디스플레이 밝기를 80% 이상으로 설정하고, 주변 광원을 차단하십시오.</p>
@@ -1246,7 +1249,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
                     onClick={() => setStarted(true)}
                     className="w-full py-4 text-lg bg-gray-900 text-white hover:bg-gray-800"
                   >
-                    테스트 시작
+                    {t.startButton}
                   </Button>
                 </div>
               </div>
