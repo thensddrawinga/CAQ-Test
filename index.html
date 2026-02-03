@@ -1307,13 +1307,13 @@ const LanguageSelector = ({ language, setLanguage }) => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold text-gray-500">
-                    문제 {currentQuestion + 1} / {questions.length}
+                    {t.questionLabel} {currentQuestion + 1} / {questions.length}
                   </span>
                   <div className="flex items-center gap-4">
                     <span className="text-sm font-semibold text-gray-900">
-                      {currentQ.type === 'A' && '색상 결합'}
-                      {currentQ.type === 'B' && '명도 조절'}
-                      {currentQ.type === 'C' && '채도 배분'}
+                      {currentQ.type === 'A' && t.colorCombination}
+                      {currentQ.type === 'B' && t.brightnessControl}
+                      {currentQ.type === 'C' && t.saturationDistribution}
                     </span>
                     <div className="flex items-center gap-1 text-base font-mono font-bold text-gray-700">
                       <Clock className="w-4 h-4" />
