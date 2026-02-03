@@ -177,7 +177,129 @@ const LanguageSelector = ({ language, setLanguage }) => {
       const [showCalculating, setShowCalculating] = useState(false);
       const [calculationProgress, setCalculationProgress] = useState(0);
       const [calculationSteps, setCalculationSteps] = useState([]);
-
+// 번역
+      const t = {
+        ko: {
+          // 시작 화면
+          title: "C.A.Q Test",
+          subtitle: "Color Aesthetic Quotient",
+          description: "색채 감각을 측정하는 표준화된 지능 테스트입니다.",
+          brightness: "정확한 측정을 위해 디스플레이 밝기를 80% 이상으로 설정하고, 주변 광원을 차단하십시오.",
+          startButton: "테스트 시작",
+          
+          // 문제 화면
+          questionLabel: "문제",
+          colorCombination: "색상 결합",
+          brightnessControl: "명도 조절",
+          saturationDistribution: "채도 배분",
+          previousQuestion: "이전 문제로",
+          
+          // 계산 중
+          calculating: "결과 계산 중",
+          dataProcessing: "데이터 처리 중",
+          
+          // 결과 화면
+          yourScore: "Your C.A.Q Score",
+          topPercentile: "상위",
+          avgTime: "평균",
+          shareImage: "공유용 이미지",
+          saveInstruction: "아래 이미지를 길게 눌러 저장하거나 공유하세요! 📸",
+          downloadImage: "이미지 다운로드",
+          shareTestLink: "테스트 링크 공유",
+          detailedScores: "세부 지수",
+          colorCombinationIndex: "색상 결합 지수",
+          brightnessIndex: "명도 조절 지수",
+          saturationIndex: "채도 배분 지수",
+          colorPersonality: "색채 성향 분석",
+          yourProfile: "당신의 색채 감각 프로필",
+          retestButton: "다시 테스트하기",
+          learnMore: "더 알아보기",
+          aboutCAQ: "C.A.Q Test 소개",
+          aboutDescription: "색채 감각 지능이란 무엇인가?",
+          testGuide: "테스트 가이드",
+          testGuideDescription: "더 정확한 측정을 위한 팁"
+        },
+        en: {
+          // 시작 화면
+          title: "C.A.Q Test",
+          subtitle: "Color Aesthetic Quotient",
+          description: "A standardized intelligence test measuring color perception.",
+          brightness: "For accurate measurement, set display brightness to 80% or higher and block ambient light.",
+          startButton: "Start Test",
+          
+          // 문제 화면
+          questionLabel: "Question",
+          colorCombination: "Color Combination",
+          brightnessControl: "Brightness Control",
+          saturationDistribution: "Saturation Distribution",
+          previousQuestion: "Previous Question",
+          
+          // 계산 중
+          calculating: "Calculating Results",
+          dataProcessing: "Processing Data",
+          
+          // 결과 화면
+          yourScore: "Your C.A.Q Score",
+          topPercentile: "Top",
+          avgTime: "Avg",
+          shareImage: "Share Image",
+          saveInstruction: "Long press the image to save or share! 📸",
+          downloadImage: "Download Image",
+          shareTestLink: "Share Test Link",
+          detailedScores: "Detailed Scores",
+          colorCombinationIndex: "Color Combination Index",
+          brightnessIndex: "Brightness Control Index",
+          saturationIndex: "Saturation Distribution Index",
+          colorPersonality: "Color Personality Analysis",
+          yourProfile: "Your Color Perception Profile",
+          retestButton: "Take Test Again",
+          learnMore: "Learn More",
+          aboutCAQ: "About C.A.Q Test",
+          aboutDescription: "What is Color Aesthetic Quotient?",
+          testGuide: "Test Guide",
+          testGuideDescription: "Tips for More Accurate Measurement"
+        },
+        ja: {
+          // 시작 화면
+          title: "C.A.Q Test",
+          subtitle: "Color Aesthetic Quotient",
+          description: "色彩感覚を測定する標準化された知能テストです。",
+          brightness: "正確な測定のため、ディスプレイの明るさを80%以上に設定し、周囲の光源を遮断してください。",
+          startButton: "テスト開始",
+          
+          // 문제 화면
+          questionLabel: "問題",
+          colorCombination: "色相配合",
+          brightnessControl: "明度調整",
+          saturationDistribution: "彩度配分",
+          previousQuestion: "前の問題へ",
+          
+          // 계산 중
+          calculating: "結果計算中",
+          dataProcessing: "データ処理中",
+          
+          // 결과 화면
+          yourScore: "Your C.A.Q Score",
+          topPercentile: "上位",
+          avgTime: "平均",
+          shareImage: "共有用画像",
+          saveInstruction: "画像を長押しして保存または共有してください！📸",
+          downloadImage: "画像ダウンロード",
+          shareTestLink: "テストリンク共有",
+          detailedScores: "詳細指数",
+          colorCombinationIndex: "色相配合指数",
+          brightnessIndex: "明度調整指数",
+          saturationIndex: "彩度配分指数",
+          colorPersonality: "色彩性向分析",
+          yourProfile: "あなたの色彩感覚プロフィール",
+          retestButton: "再テスト",
+          learnMore: "詳しく見る",
+          aboutCAQ: "C.A.Q Testについて",
+          aboutDescription: "色彩感覚知能とは？",
+          testGuide: "テストガイド",
+          testGuideDescription: "より正確な測定のためのヒント"
+        }
+      }[language];
       const questions = [
         {
           type: 'A',
