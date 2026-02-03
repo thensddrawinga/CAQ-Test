@@ -1057,14 +1057,14 @@ const LanguageSelector = ({ language, setLanguage }) => {
               </Card>
 
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
-  <h3 className="text-2xl font-bold text-gray-900 mb-2">세부 지수</h3>
+  <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.detailedScores}</h3>
   <p className="text-xs text-gray-500 mb-6">
     L-U: Ultra · L-A: Advanced · L-N: Normal · L-B: Basic · L-E: Entry
   </p>
   <div className="space-y-6">
     <div>
       <div className="flex justify-between mb-2">
-        <span className="font-semibold text-gray-700">색상 결합 지수</span>
+        <span className="font-semibold text-gray-700">{t.colorCombinationIndex}</span>
         <div className="flex items-center gap-2">
           <span className="font-bold text-gray-900">{results.typeAScore}점</span>
           <span className={`text-xs px-2 py-1 rounded font-medium ${
