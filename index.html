@@ -1212,17 +1212,17 @@ const LanguageSelector = ({ language, setLanguage }) => {
               </div>
               {/* 더 알아보기 섹션 */}
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">📚 더 알아보기</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">📚 {t.learnMore}</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <a href="about.html" className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border-2 border-blue-200 hover:border-blue-300 transition-all text-center">
                     <div className="text-3xl mb-2">🎨</div>
-                    <h4 className="font-bold text-gray-900 mb-2">C.A.Q Test 소개</h4>
-                    <p className="text-sm text-gray-600">색채 감각 지능이란 무엇인가?</p>
+                    <h4 className="font-bold text-gray-900 mb-2">{t.aboutCAQ}</h4>
+                    <p className="text-sm text-gray-600">{t.aboutDescription}</p>
                   </a>
                   <a href="how-to.html" className="p-6 bg-gradient-to-br from-green-50 to-teal-50 rounded-lg border-2 border-green-200 hover:border-green-300 transition-all text-center">
                     <div className="text-3xl mb-2">💡</div>
-                    <h4 className="font-bold text-gray-900 mb-2">테스트 가이드</h4>
-                    <p className="text-sm text-gray-600">더 정확한 측정을 위한 팁</p>
+                    <h4 className="font-bold text-gray-900 mb-2">{t.testGuide}</h4>
+                    <p className="text-sm text-gray-600">{t.testGuideDescription}</p>
                   </a>
                 </div>
               </Card>
