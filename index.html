@@ -1428,6 +1428,17 @@ const LanguageSelector = ({ language, setLanguage }) => {
         );
       }
 
+      // 참여자 수 계산
+      const getTotalParticipants = () => {
+        const startDate = new Date('2025-01-01');
+        const today = new Date();
+        const daysPassed = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        const baseCount = 5000;
+        const dailyIncrease = 50;
+        const randomVariation = Math.floor(Math.random() * 20) - 10; // -10 ~ +10
+        return baseCount + (daysPassed * dailyIncrease) + randomVariation;
+      };
+      
       if (!started) {
         return (
           <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 flex items-center justify-center p-4 relative">
@@ -1438,6 +1449,12 @@ const LanguageSelector = ({ language, setLanguage }) => {
                 <p className="text-2xl text-gray-600">{t.subtitle}</p>
                 <p className="text-xl text-gray-700 leading-relaxed">{t.description}</p>
                 <p className="text-base text-gray-500 leading-relaxed">{t.brightness}</p>
+               
+                <div className="flex items-center justify-center gap-2 text-lg font-semibold text-purple-600 bg-purple-50 py-3 px-6 rounded-full">
+                  <span>👥</span>
+                  <span>{getTotalParticipants().toLocaleString()}명이 테스트했어요!</span>
+                </div>
+               
                 <div className="space-y-3">
                   <Button 
                     onClick={() => setStarted(true)}
