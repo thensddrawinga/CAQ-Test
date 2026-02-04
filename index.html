@@ -1336,13 +1336,13 @@ const LanguageSelector = ({ language, setLanguage }) => {
             const scoreDiff = maxScore - minScore;
             
             if (scoreDiff <= 15) {
-              return '균형형 "올라운더"';
+              return t.typeAllRounder;
             } else if (maxScore === results.typeAScore) {
-              return '조화 특화형 "컬러 마에스트로"';
+              return t.typeColorMaestro;
             } else if (maxScore === results.typeBScore) {
-              return '대비 특화형 "명암의 달인"';
+              return t.typeBrightnessExper;
             } else {
-              return '감성 특화형 "채도의 마술사"';
+              return t.typeSaturationMagician;
             }
           })()}
         </h4>
