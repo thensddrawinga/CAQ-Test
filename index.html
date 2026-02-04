@@ -1161,9 +1161,13 @@ const LanguageSelector = ({ language, setLanguage }) => {
 
   <button
     onClick={async () => {
-      const url = window.location.href;
-      const text = `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%! 너도 테스트해봐!`;
-      
+      const url = `${window.location.origin}/?score=${results.aqScore}&rank=${results.percentile}&lang=${language}`;
+      const text = language === 'ko' 
+        ? `나는 C.A.Q ${results.aqScore}점! 상위 ${results.percentile}%! 너도 테스트해봐!`
+        : language === 'ja'
+        ? `私のC.A.Qスコアは${results.aqScore}点! 上位${results.percentile}%! あなたもテストしてみて!`
+        : `My C.A.Q Score: ${results.aqScore}! Top ${results.percentile}%! Take the test!`;
+       
       if (navigator.share) {
         try {
           await navigator.share({
