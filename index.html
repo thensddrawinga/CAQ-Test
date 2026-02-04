@@ -1453,9 +1453,8 @@ const LanguageSelector = ({ language, setLanguage }) => {
                 <p className="text-xl text-gray-700 leading-relaxed">{t.description}</p>
                 <p className="text-base text-gray-500 leading-relaxed">{t.brightness}</p>
                
-                <div className="flex items-center justify-center gap-2 text-lg font-semibold text-purple-600 bg-purple-50 py-3 px-6 rounded-full">
-                  <span>👥</span>
-                  <span>{getTotalParticipants().toLocaleString()}명이 테스트했어요!</span>
+                <div className="text-base text-gray-600">
+                  {t.participants} {getTotalParticipants().toLocaleString()}{language === 'ko' ? '명' : ''}
                 </div>
                
                 <div className="space-y-3">
