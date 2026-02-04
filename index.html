@@ -108,7 +108,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
                 language === lang.code ? 'bg-gray-50' : ''
               }`}
             >
-              <span className="text-lg">{lang.flag}</span>
+              <span className="text-sm font-bold text-gray-700">{lang.code.toUpperCase()}</span>
               <span className="text-sm font-medium text-gray-700">{lang.label}</span>
             </button>
           ))}
