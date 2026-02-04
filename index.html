@@ -1240,7 +1240,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
       <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
         <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeAScore + '%' }}></div>
       </div>
-      {t.indexColorDesc}
+      <p className="text-base text-gray-600 leading-relaxed">{t.indexColorDesc}</p>
     </div>
 
     <div>
@@ -1265,7 +1265,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
       <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
         <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeBScore + '%' }}></div>
       </div>
-      {t.indexBrightnessDesc}
+      <p className="text-base text-gray-600 leading-relaxed">{t.indexBrightnessDesc}</p>
     </div>
 
     <div>
@@ -1290,7 +1290,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
       <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
         <div className="bg-gray-900 h-3 rounded-full transition-all" style={{ width: results.typeCScore + '%' }}></div>
       </div>
-      {t.indexSaturationDesc}
+      <p className="text-base text-gray-600 leading-relaxed">{t.indexSaturationDesc}</p>
     </div>
   </div>
 </Card>
