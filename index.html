@@ -1458,7 +1458,38 @@ const LanguageSelector = ({ language, setLanguage }) => {
   
         return baseCount + minutesPassed;
       };
-      
+
+      // 친구 점수 화면
+if (sharedScore && !started) {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 flex items-center justify-center p-4">
+      <LanguageSelector language={language} setLanguage={setLanguage} />
+      <div className="max-w-2xl w-full p-8">
+        <Card className="p-12 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl text-center space-y-6">
+          <div className="text-6xl mb-4">🎨</div>
+          <h2 className="text-3xl font-bold text-gray-900">
+            {language === 'ko' ? '친구의 결과' : language === 'ja' ? '友達の結果' : "Friend's Result"}
+          </h2>
+          <div className="text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
+            {sharedScore}
+          </div>
+          <p className="text-2xl text-gray-600">
+            {language === 'ko' ? `상위 ${sharedRank}%` : language === 'ja' ? `上位 ${sharedRank}%` : `Top ${sharedRank}%`}
+          </p>
+          <p className="text-xl text-gray-700 mt-6">
+            {language === 'ko' ? '당신은 이 점수를 넘을 수 있나요?' : language === 'ja' ? 'あなたはこのスコアを超えられますか？' : 'Can you beat this score?'}
+          </p>
+          <Button
+            onClick={() => setStarted(true)}
+            className="w-full py-6 text-2xl bg-gray-900 text-white hover:bg-gray-800 mt-8"
+          >
+            {language === 'ko' ? '도전하기' : language === 'ja' ? 'チャレンジする' : 'Take Challenge'}
+          </Button>
+        </Card>
+      </div>
+    </div>
+  );
+}
       if (!started) {
         return (
           <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 flex items-center justify-center p-4 relative">
