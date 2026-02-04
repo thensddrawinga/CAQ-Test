@@ -167,7 +167,12 @@ const LanguageSelector = ({ language, setLanguage }) => {
     );
 
     function CAQTest() {
-      const [language, setLanguage] = useState('ko');
+      const [language, setLanguage] = useState(() => {
+      const browserLang = navigator.language.toLowerCase();
+      if (browserLang.startsWith('ko')) return 'ko';
+      if (browserLang.startsWith('ja')) return 'ja';
+      return 'en';
+    });
       const [started, setStarted] = useState(false);
       const [currentQuestion, setCurrentQuestion] = useState(0);
       const [answers, setAnswers] = useState({});
