@@ -173,6 +173,20 @@ const LanguageSelector = ({ language, setLanguage }) => {
       if (browserLang.startsWith('ja')) return 'ja';
       return 'en';
     });
+
+      // URL에서 공유된 점수 읽기
+      const urlParams = new URLSearchParams(window.location.search);
+      const sharedScore = urlParams.get('score');
+      const sharedRank = urlParams.get('rank');
+      const sharedLang = urlParams.get('lang');
+
+      // 공유된 링크로 들어왔으면 언어 설정
+      useEffect(() => {
+        if (sharedLang && ['ko', 'en', 'ja'].includes(sharedLang)) {
+          setLanguage(sharedLang);
+        }
+      }, [sharedLang]);
+    
       const [started, setStarted] = useState(false);
       const [currentQuestion, setCurrentQuestion] = useState(0);
       const [answers, setAnswers] = useState({});
