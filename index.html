@@ -92,7 +92,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
         className="flex items-center gap-2 px-3 py-2 bg-white/70 backdrop-blur-lg rounded-full shadow-lg border border-white/20 hover:bg-white/90 transition-all"
       >
         <GlobeIcon className="w-5 h-5 text-gray-700" />
-        <span className="text-sm font-medium text-gray-700">{currentLang.flag}</span>
+        <span className="text-sm font-medium text-gray-700">{currentLang.code.toUpperCase()}</span>
       </button>
 
       {isOpen && (
