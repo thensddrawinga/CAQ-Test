@@ -971,7 +971,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
             <div className="max-w-4xl mx-auto space-y-6">
               <Card className="p-8 bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl">
                 <div className="text-center space-y-4">
-                  <h2 className="text-3xl font-bold text-gray-900">Your C.A.Q Score</h2>
+                  <h2 className="text-4xl font-bold text-gray-900">Your C.A.Q Score</h2>
                   <div 
                     className="text-7xl font-bold bg-clip-text text-transparent"
                     style={{
@@ -984,7 +984,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
                   </div>
                   
                   <div className="flex flex-col items-center gap-2">
-                    <span className={`text-sm px-4 py-2 rounded-full font-bold ${
+                    <span className={`text-base px-5 py-2.5 rounded-full font-bold ${
                       results.aqScore >= 128 ? 'bg-purple-100 text-purple-800' :
                       results.aqScore >= 113 ? 'bg-blue-100 text-blue-800' :
                       results.aqScore >= 98 ? 'bg-green-100 text-green-800' :
@@ -996,7 +996,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
                        results.aqScore >= 98 ? t.levelNormal :
                        results.aqScore >= 83 ? t.levelBasic : t.levelEntry}
                     </span>
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <div className="flex items-center gap-4 text-base text-gray-600">
                       <span>상위 {t.topLabel} {results.percentile}%</span>
                       <span>•</span>
                       <div className="flex items-center gap-1">
@@ -1006,7 +1006,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
                     </div>
                   </div>
                   
-                  <p className="max-w-2xl mx-auto text-sm text-gray-600 leading-relaxed mt-4">
+                  <p className="max-w-2xl mx-auto text-base text-gray-600 leading-relaxed mt-4">
                     {results.aqScore >= 128 ? t.scoreUltra :
                      results.aqScore >= 113 ? t.scoreAdvanced :
                      results.aqScore >= 98 ? t.scoreNormal :
